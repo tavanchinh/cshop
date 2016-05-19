@@ -1,0 +1,157 @@
+<?php 
+    $list = array(
+        'Vân Trang, Nam Thư tranh nhau trai đẹp trên sân khấu',
+        '"Hoàng Tử Bé" được kênh Netflix "cứu thoát" tại Mỹ',
+        'Hoa hậu Hoàn vũ Puerto Rico bị truất ngôi vì thô lỗ với phóng viên',
+        'Lưu Thi Thi tiết lộ nhẫn kim cương, váy cưới hàng chục tỷ',
+        'Những hình ảnh hiếm hoi thời còn trẻ của Trần Lập',
+        'Bảo Anh lần đầu kể chuyện cãi lại Trần Lập ở The Voice',
+        'Hà Phương chia sẻ bí quyết giữ được chồng tỷ phú',
+        'Mách nàng tip nhỏ để diện áo cổ tròn không đơn điệu',
+        'Diện đồ denim linh hoạt như chị em diễn viên "Maleficent"',
+        'Andrea Torres xinh đẹp, lôi cuốn trong phim mới',
+        'Phim sắp ra rạp: Giải mã lời nguyền',
+        'Trương Thiên Ái đóng phim điện ảnh đầu tay, Quách Phú Thành sánh đôi Triệu Lệ Dĩnh',
+        '"Kong: Skull Island" kết thúc việc quay phim tại Việt Nam',
+    );
+?>
+<div class="container">
+    <div id="left-content">
+        <ul id="top-slide">
+            <?php for($i=1;$i<4;$i++){?>
+            <li>
+                <a href="#">
+                    <img src="../images/<?php echo $i?>.jpg" />
+                    <div class="text">
+                        <p class="title">Wind Chime</p>
+                        <div class="sapo">
+                            When a young woman sets off on an epic journey to find answers about her murdered mother, will she discover the road to her own destiny?
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <?php }?>
+        </ul>
+        <script>
+            $(function(){
+                
+                $("#top-slide").owlCarousel({
+        			singleItem:true,
+        			autoPlay:true,
+        			slideSpeed:200,
+        			lazyLoad : true,
+        			stopOnHover:true,
+                    navigation : true,
+                    navigationText : ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
+        		});
+                
+            })
+        </script>
+        
+        <div class="block hotnews">
+            <div class="content">
+                <ul class="featured list-news">
+                    <li class="lagre-item">
+                        <a title="" href="">
+                            <img src="../images/4.jpg" />
+                            <p class="title"> Love Me If You Dare</p>    
+                        </a>
+                        <div class="sapo">
+                            Getting inside the head of a violent criminal is not easy. But Simon Bo (Wallace Huo), a brilliant criminal psychologist, has the ability to get into the minds of even the most mysterious and violent criminals...
+                        </div>
+                    </li>
+                    <?php for($i =5;$i<8;$i++){?>
+                        <li class="small-item <?php echo ($i%7 == 0) ? 'no-margin-right' : ''?>">
+                            <a href="">
+                                <img src="../images/<?php echo $i?>.jpg" />
+                                <p class="title"><?=$list[$i]?></p>
+                            </a>
+                        </li>
+                    <?php }?>
+                </ul><!-- End featured-->
+                <ul class="trend list-news">
+                    <li>
+                        <a title="" href="">
+                            <img src="../images/9.jpg" />
+                            <p class="title">My Little Lover - Minami Kun No Koibito</p>    
+                        </a>
+                    </li>
+                    <?php for($i = 0; $i < 8; $i++){?>
+                        <li><a href="#" title="<?php echo $list[$i]?>"><?php echo $list[$i]?></a></li>
+                    <?php }?>
+                </ul><!-- End trend-->
+            </div>
+        </div>
+        <?php
+            $menus = array(
+                'Xem gì hôm nay','Chuyện sao','Cine','Quotes','Video',
+            );
+        ?>
+        <?php foreach($menus as $value){?>
+        <div class="block-cate block">
+            <div class="heading">
+                <a href="">
+                    <?php echo $value?>
+                    <span href="#" class="view-more">Xem thêm</span>
+                </a>
+                
+            </div>
+            <div class="content">
+                <ul class="list-news">
+                    <li class="lagre-item">
+                        <a title="" href="">
+                            <img src="../images/4.jpg" />
+                            <p class="title"> Love Me If You Dare</p>    
+                        </a>
+                        <div class="sapo">
+                            Getting inside the head of a violent criminal is not easy. But Simon Bo (Wallace Huo), a brilliant criminal psychologist, has the ability to get into the minds of even the most mysterious and violent criminals...
+                        </div>
+                        
+                    </li>
+                    <?php for($i =5;$i<10;$i++){?>
+                        <li class="small-item">
+                            <a href="">
+                                <img src="../images/<?php echo $i?>.jpg" />
+                                <p class="title">My Little Lover - Minami Kun No Koibito</p>
+                            </a>
+                            <span class="time">
+                                <i class="fa fa-clock-o"></i>
+                                3 giờ trước
+                            </span>
+                        </li>
+                    <?php }?>
+                </ul>
+            </div>
+        </div>
+        <?php }?>
+        
+        
+    </div> <!-- End left-content-->
+    <div id="right-content">
+        <div class="block most-popular">
+            <div class="heading">
+                <span>Đọc nhiều</span>
+            </div>
+            <div class="content">
+                <ul class="list-news">
+                    <?php for($i =5;$i<11;$i++){?>
+                        <li class="small-item <?php echo ($i%2 == 0) ? 'no-margin-right' : ''?>">
+                            <a href="">
+                                <img src="../images/<?php echo $i?>.jpg" />
+                                <p class="title">My Little Lover - Minami Kun No Koibito</p>
+                            </a>
+                            <span class="time">
+                                <i class="fa fa-clock-o"></i>
+                                3 giờ trước |
+                            </span>
+                            <span class="view">
+                                <i class="fa fa-eye"></i> 3.563 lượt
+                            </span>
+                        </li>
+                    <?php }?>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+</div>
