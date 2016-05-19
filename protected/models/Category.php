@@ -206,8 +206,8 @@ class Category extends CActiveRecord
     }
     
     
-    public function getTreeFrontend(){
-        $data = Yii::app()->cache->get('cate_frontend');
+    public function getMultilevel(){
+        $data = Yii::app()->cache->get('cate_multilevel');
         if($data === false){
             $data = array();
             $list_cate = $this->getAll();
@@ -220,7 +220,7 @@ class Category extends CActiveRecord
                     $data[$value['parent_id']]['sub'] = $tmp[$value['parent_id']];
                 }
             }
-            Yii::app()->cache->set('cate_frontend',$data,$this->time_cache);
+            Yii::app()->cache->set('cate_multilevel',$data,$this->time_cache);
         }
         
         return $data;

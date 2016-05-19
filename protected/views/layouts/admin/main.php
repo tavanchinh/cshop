@@ -28,6 +28,7 @@ $baseUrl = Yii::app()->request->baseUrl;
     
     <!-- common functions -->
     <script src="<?php echo $baseUrl?>/assets/admin/js/common.min.js"></script>
+    <script src="<?php echo $baseUrl?>/assets/admin/js/altair_admin_common.min.js"></script>
     <script type="text/javascript" src="/ckeditor/ckeditor.js"></script>
     <script type="text/javascript" src="/ckeditor/config.js"></script>	
     <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl?>/js/jquery.datetimepicker.js"></script>
@@ -66,8 +67,6 @@ $baseUrl = Yii::app()->request->baseUrl;
         
         <div class="sidebar_main_header">
             <div class="sidebar_logo">
-                <a href="/admin" class="sSidebar_hide"><img src="/images/logo-2.png" alt="" style="width: 45px;"/></a>
-                <a href="/admin" class="sSidebar_show"><img src="/images/logo-2.png" alt=""  style="width: 32px;"/></a>
             </div>
         </div>
         

@@ -67,20 +67,20 @@ class Product extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'title' => 'Title',
-			'image' => 'Image',
+			'title' => 'Tên',
+			'image' => 'Ảnh',
 			'sku' => 'Sku',
-			'price' => 'Price',
+			'price' => 'Giá',
 			'sale' => 'Sale',
-			'create_date' => 'Create Date',
-			'modify_date' => 'Modify Date',
-			'create_by' => 'Create By',
-			'modify_by' => 'Modify By',
-			'feature' => 'Feature',
-			'sapo' => 'Sapo',
-			'description' => 'Description',
-			'status' => 'Status',
-			'stock' => 'Stock',
+			'create_date' => 'Ngày tạo',
+			'modify_date' => 'Ngày cập nhật',
+			'create_by' => 'Tạo bởi',
+			'modify_by' => 'Cập nhật bởi',
+			'feature' => 'Đặc biệt',
+			'sapo' => 'Tóm tắt',
+			'description' => 'Chi tiết',
+			'status' => 'Trạng thái',
+			'stock' => 'Tình trạng',
 		);
 	}
 

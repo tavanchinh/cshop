@@ -232,3 +232,18 @@ textarea.md-input{
     width: auto;
     float: left;
 }
+ul.checklist{
+    padding: 0;
+}
+ul.checklist li{
+    list-style: none;
+    line-height: 22px;
+}
+ul.checklist li input{
+    margin-right: 3px;
+    float: left;
+    margin: 4px 5px 0 0;
+}
+ul.checklist li ul{
+    
+}

@@ -12,10 +12,25 @@
         
         array(
             'text' => 'User',
-            'icon' => '<i class="material-icons">&#xE01D;</i>',
+            'icon' => '<i class="material-icons">perm_identity</i>',
             'link' => '/'.$module.'/default',
             'list_controller_actions' => array(
                 'default_index',
+            )
+        ),
+        
+        array(
+            'text' => 'Sản phẩm',
+            'icon' => '<i class="material-icons">shopping_cart</i>',
+            'link' => '#',
+            'list_controller_actions' => array(
+                'product_admin',
+                'product_create',
+                
+            ),
+            'sub' => array(
+                array('link' => '/'.$module.'/product/admin','text' => 'Tất cả sản phẩm','controller_action' => 'product_admin'),
+                array('link' => '/'.$module.'/product/create','text' => 'Thêm mới','controller_action' => 'product_create'),
             )
         ),
         array(
