@@ -174,3 +174,31 @@ function formatNumber(s) {
     
   
 }
+
+function delete_row(obj,url,id){
+    
+    var $tr = $(obj).parents('tr');
+    var succ = function(data){
+        $tr.remove();
+    }
+    data = {'id':id};
+    
+    var conf = confirm('Bạn có chắc chắn muốn xóa nó ?');
+    if(conf){
+        handleAjax(url,'POST','',data,succ);    
+    }   
+}
+
+function toggle_feature(obj,url,id,feature){
+    if(feature){
+        $(obj).attr('class','material-icons').text('star_border');
+    }else{
+        $(obj).attr('class','material-icons active').text('star');
+    }
+    var succ = function(data){
+        
+    }
+    data = {'id':id,'feature':feature};
+    
+    handleAjax(url,'POST','',data,succ);    
+}

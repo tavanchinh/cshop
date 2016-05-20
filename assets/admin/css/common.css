@@ -47,8 +47,6 @@ span.required{
     color: #FF0600;
     font-size: 14px;
     font-weight: bold;
-    float: left;
-    margin: 0 5px 0 0;
     line-height: 16px;
 }
 .errorMessage {
@@ -225,19 +223,34 @@ textarea.md-input{
 }
 .md-card-content .row label{
     float: left;
-    width: 140px;
+    width: 120px;
     margin: 12px 0 0 0;
+    font-weight: bold;
+    font-size: 13px;
 }
 .md-card-content .row input{
     width: auto;
-    float: left;
 }
+ul.image-upload-gallery,
+ul.image-upload,
 ul.checklist{
     padding: 0;
+    margin: 0;
+}
+ul.image-upload{
+    text-align: center;
+}
+ul.image-upload-gallery li{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
 }
 ul.checklist li{
     list-style: none;
     line-height: 22px;
+}
+ul.checklist li label{
+    cursor: pointer;
 }
 ul.checklist li input{
     margin-right: 3px;
@@ -246,4 +259,74 @@ ul.checklist li input{
 }
 ul.checklist li ul{
     
+}
+.select2-container-multi .select2-choices .select2-search-choice{
+    padding-left: 5px !important;
+}
+.has-row-actions .row-actions{
+    padding: 0;
+    margin: 5px 0 0 0;
+}
+.has-row-actions .row-actions li{
+    color:#333333;
+    list-style: none;
+    float: left;
+    padding: 0 5px;
+    border-left: 1px solid #cccccc;
+    line-height: 11px;
+}
+.grid-view{
+    margin: 0 !important;
+}
+.grid-view .row .title,
+.grid-view .row .name{
+    font-weight: bold;
+    font-size: 14px;
+}
+.grid-view .material-icons{
+    cursor: pointer;
+}
+.grid-view .material-icons.active{
+    color: #ffa000;
+}
+.subsubsub li:first-child,
+.has-row-actions .row-actions li:first-child{
+    border:none;
+    padding-left: 0;
+}
+.has-row-actions .row-actions li a{
+    color: #333333;
+}
+.has-row-actions .row-actions li a.trash,
+.has-row-actions .row-actions li a.del{
+    color:#a00;
+}
+.subsubsub{
+    clear: both;
+    margin: 0 0 4px 0;
+    padding: 0;
+    overflow: hidden;
+}
+.subsubsub li{
+    color:#333333;
+    list-style: none;
+    float: left;
+    font-size: 15px;
+}
+.subsubsub li:before{
+    content:"";
+    width: 1px;
+    height: 15px;
+    float: left;
+    background: #cccccc;
+    margin: 3px 10px;
+}
+.subsubsub li:first-child:before{
+    content:none;
+}
+.subsubsub li a{
+    color:#333333;
+}
+.subsubsub li a.active{
+    font-weight: bold;
 }

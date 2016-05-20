@@ -97,4 +97,46 @@ class ProductGallery extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+    
+    
+    /**
+     * Add to table product_category
+    */
+    public function QuickAdd($product_id,$list_image,$unique = false){
+        $execute = false;
+        
+        if(count($list_image) > 0){
+            // Kiểm tra trùng lặp
+            if($unique){
+                $delete_not_id = '-1';
+                $sql = "INSERT IGNORE INTO product_gallery(product_id,image) VALUES";
+                foreach($list_image as $value){
+                    if($value != ''){
+                        $sql .= "($product_id,'$value'),";
+                        $execute = true;
+                        $delete_not_id .= ",'".$value."'";
+                    }
+                }
+                if($execute){
+                    $sql = substr($sql,0,-1);;
+                    Yii::app()->db->createCommand($sql)->execute();
+                    $sql_delete = "DELETE FROM product_gallery WHERE product_id=$product_id AND image NOT IN ($delete_not_id)";
+                    Yii::app()->db->createCommand($sql_delete)->execute();
+                }
+            }else{
+                $sql = "INSERT INTO product_gallery(product_id,image) VALUES";
+                foreach($list_image as $value){
+                    if($value != ''){
+                        $sql .= "($product_id,'$value'),";
+                        $execute = true;
+                    }
+                }
+                if($execute){
+                    $sql = substr($sql,0,-1);;
+                    
+                    Yii::app()->db->createCommand($sql)->execute();
+                }
+            }
+        }
+    }
 }

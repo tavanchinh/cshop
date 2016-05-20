@@ -27,6 +27,7 @@ $baseUrl = Yii::app()->request->baseUrl;
     <script type="text/javascript" src="<?php echo $baseUrl;?>/assets/admin/js/jquery-1.11.1.min.js"></script>
     
     <!-- common functions -->
+    <script type="text/javascript" src="/assets/admin/js/functions.js"></script>	
     <script src="<?php echo $baseUrl?>/assets/admin/js/common.min.js"></script>
     <script src="<?php echo $baseUrl?>/assets/admin/js/altair_admin_common.min.js"></script>
     <script type="text/javascript" src="/ckeditor/ckeditor.js"></script>

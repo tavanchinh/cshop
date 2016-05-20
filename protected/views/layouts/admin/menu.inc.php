@@ -29,7 +29,7 @@
                 
             ),
             'sub' => array(
-                array('link' => '/'.$module.'/product/admin','text' => 'Tất cả sản phẩm','controller_action' => 'product_admin'),
+                array('link' => '/'.$module.'/product/admin?view=all','text' => 'Tất cả sản phẩm','controller_action' => 'product_admin'),
                 array('link' => '/'.$module.'/product/create','text' => 'Thêm mới','controller_action' => 'product_create'),
             )
         ),

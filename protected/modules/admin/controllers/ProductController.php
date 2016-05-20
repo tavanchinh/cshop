@@ -48,11 +48,33 @@ class ProductController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Product']))
-		{
+        if(isset($_POST['Product']))
+        {
+		      
 			$model->attributes=$_POST['Product'];
-			if($model->save())
-				$this->redirect(array('admin'));
+            $model->create_date = date('Y-m-d H:i:s');
+            $model->create_by = Yii::app()->session['admin_id'];
+            
+			if($model->save()){
+                if(isset($_POST['categories']) && count($_POST['categories']) > 0){
+                    ProductCategory::model()->QuickAdd($model->id,$_POST['categories']);
+                }
+                
+                if(isset($_POST['product_image']) && count($_POST['product_image']) > 0){
+                    ProductGallery::model()->QuickAdd($model->id,$_POST['product_image']);
+                }
+                
+                if(isset($_POST['tags']) && count($_POST['tags']) > 0){
+                    $list_tags = explode(',',$_POST['tags']);
+                    ProductTag::model()->QuickAdd($model->id,$list_tags);
+                }
+                if(!$_POST['continue']){
+                    $this->redirect(array('admin'));
+                }else{
+                    $model->unsetAttributes();
+                }
+			}
+			
 		}
 
 		$this->render('create',array(
@@ -75,10 +97,30 @@ class ProductController extends Controller
 		if(isset($_POST['Product']))
 		{
 			$model->attributes=$_POST['Product'];
-			if($model->save())
-				$this->redirect(array('admin'));
+            $model->modify_date = date('Y-m-d H:i:s');
+            $model->modify_by = Yii::app()->session['admin_id'];
+            
+			if($model->save()){
+                if(isset($_POST['categories']) && count($_POST['categories']) > 0){
+                    ProductCategory::model()->QuickAdd($model->id,$_POST['categories'],true);
+                }
+                
+                if(isset($_POST['product_image']) && count($_POST['product_image']) > 0){
+                    ProductGallery::model()->QuickAdd($model->id,$_POST['product_image'],true);
+                }
+                
+                if(isset($_POST['tags']) && count($_POST['tags']) > 0){
+                    $list_tags = explode(',',$_POST['tags']);
+                    ProductTag::model()->QuickAdd($model->id,$list_tags,true);
+                }
+                if(!$_POST['continue']){
+                    $this->redirect(array('admin'));
+                }else{
+                    $model->unsetAttributes();
+                }
+			}
 		}
-
+        
 		$this->render('update',array(
 			'model'=>$model,
 		));
@@ -91,12 +133,33 @@ class ProductController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		$this->loadModel($id)->delete();
-
+        $model = $this->loadModel($id)->delete();
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
 			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
 	}
+    
+    /**
+     * Hide product
+    */
+    public function actionTrash(){
+        $id = Yii::app()->request->getPost('id');
+        $model =  $this->loadModel($id);
+        $model->status = 3;
+        $model->save();
+    }
+    
+    /**
+     * Toggle feature product
+    */
+    public function actionToggleFeature(){
+        $id = Yii::app()->request->getPost('id');
+        $feature = Yii::app()->request->getPost('feature');
+        $feature = (-1)*$feature+1;
+        $model = $this->loadModel($id);
+        $model->feature = $feature;
+        $model->save();
+    }
 
 	/**
 	 * Lists all models.
@@ -118,13 +181,40 @@ class ProductController extends Controller
             Yii::app()->user->setState('pageSize',(int)$_GET['pageSize']);
             unset($_GET['pageSize']);
         }
+        
+        
         $model=new Product('search');
 		$model->unsetAttributes();  // clear any default values
+        $view_mode = null;
+        $list_count_by_status = Product::model()->countGroupStatus();
+        
+        if(isset($_GET['view'])){
+            $view_mode = $_GET['view'];
+            switch($view_mode){
+                case 'pending':
+                    $model->status = 0;
+                    break;
+                case 'show':
+                    $model->status = 1;
+                    break;
+                case 'draft':
+                    $model->status = 2;
+                    break;
+                case 'hide':
+                    $model->status = 3;
+                    break;
+                default:
+                    $model->status = null;
+                    break;
+            }
+        }
 		if(isset($_GET['Product']))
 			$model->attributes=$_GET['Product'];
 
 		$this->render('admin',array(
 			'model'=>$model,
+            'view_mode' => $view_mode,
+            'list_count_by_status' => $list_count_by_status,
 		));
 	}
 
@@ -155,4 +245,59 @@ class ProductController extends Controller
 			Yii::app()->end();
 		}
 	}
+    
+    
+    public function gridImage($data,$row){
+        return '<img src="'.SimpleImage::model()->getThumbnail($data->image,60).'" />';
+    }
+    public function gridTitle($data,$row){
+        $url_trash  ='/admin/product/trash';
+        $html = '<div class="row has-row-actions">
+                    <a class="title" href="/admin/product/update/id/'.$data->id.'">'.$data->title.'</a>
+                    <ul class="row-actions">
+                        <li><a href="/admin/product/update/id/'.$data->id.'">Edit</a></li>';
+        if($data->status != 3){
+            $html .= '<li><a onclick="delete_row(this,\''.$url_trash.'\','.$data->id.')" class="trash delete" href="javascript:void(0)">Trash</a></li>';
+        }    
+        $html .='</ul>
+                </div>';
+        return $html;
+        
+    }
+    public function gridCategories($data,$row){
+        $list = Product::model()->getCatSelected($data->id);
+        $str = implode(', ',$list);
+        return $str;
+        
+    }
+    public function gridStock($data,$row){
+        if($data->stock){
+            return '<span class="uk-badge uk-badge-success">'.Product::model()->list_stock[$data->stock].'</span>';
+        }else{
+            return '<span class="uk-badge uk-badge-danger">'.Product::model()->list_stock[$data->stock].'</span>';
+        }
+        //return '<a href="/admin/product/edit/id/'.$data->id.'">'.$data->title.'</a>';
+    }
+    
+    public function gridDate($data,$row){
+        if($data->modify_date != ''){
+            $str = 'Cập nhật lúc:<br />' . date('d/m/Y H:i',strtotime($data->modify_date));
+        }else{
+            $str = 'Thêm lúc:<br />' . date('d/m/Y H:i',strtotime($data->create_date));
+        }
+        return $str;
+    }
+    
+    public function gridFeature($data,$row){
+        if($data->feature){
+            $star = 'star';
+            $class = 'material-icons active';
+            
+        }else{
+            $star = 'star_border';
+            $class = 'material-icons';
+        }
+        $funtion = "toggle_feature(this,'/admin/product/togglefeature',".$data->id.",".$data->feature.")";
+        return '<i onclick="'.$funtion.'" class="'.$class.'">'.$star.'</i>';
+    }
 }
