@@ -87,7 +87,7 @@ $('.search-form form').submit(function(){
             'header' => '<a>Danh mục</a>',
             'name' => 'categories',
             'value' => array($this,'gridCategories'),
-            'headerHtmlOptions' => array('style' => 'width:100px'),
+            'headerHtmlOptions' => array('style' => 'width:130px'),
             'filter' => CHtml::dropDownList('Product[cat_id]',$model->cat_id,$tree_cate,array('empty'=>'-- Tất cả --')),
             'type' =>'raw',
         ),

@@ -185,28 +185,25 @@ class ProductController extends Controller
         
         $model=new Product('search');
 		$model->unsetAttributes();  // clear any default values
-        $view_mode = null;
+        $view_mode = Yii::app()->request->getParam('view','all');
         $list_count_by_status = Product::model()->countGroupStatus();
         
-        if(isset($_GET['view'])){
-            $view_mode = $_GET['view'];
-            switch($view_mode){
-                case 'pending':
-                    $model->status = 0;
-                    break;
-                case 'show':
-                    $model->status = 1;
-                    break;
-                case 'draft':
-                    $model->status = 2;
-                    break;
-                case 'hide':
-                    $model->status = 3;
-                    break;
-                default:
-                    $model->status = null;
-                    break;
-            }
+        switch($view_mode){
+            case 'pending':
+                $model->status = 0;
+                break;
+            case 'show':
+                $model->status = 1;
+                break;
+            case 'draft':
+                $model->status = 2;
+                break;
+            case 'hide':
+                $model->status = 3;
+                break;
+            default:
+                $model->status = null;
+                break;
         }
 		if(isset($_GET['Product']))
 			$model->attributes=$_GET['Product'];

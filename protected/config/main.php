@@ -145,12 +145,14 @@ return array(
                         
 					),
 				),
+                /*
 				array(
 					'class'=>'CFileLogRoute',
 					'levels'=>'trace',
 					'categories'=>'system.db.*',
 					'logFile'=>'sql.log',
 				),
+                */
                 /*
 				array(
 				   'class'=>'CPhpMailerLogRoute',
