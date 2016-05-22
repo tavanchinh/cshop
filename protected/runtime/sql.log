@@ -2452,3 +2452,447 @@ in D:\xampp\htdocs\cshop\index.php (15)
 2016/05/19 23:30:42 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `product`
 in D:\xampp\htdocs\cshop\protected\modules\admin\controllers\ProductController.php (46)
 in D:\xampp\htdocs\cshop\index.php (15)
+2016/05/22 19:01:25 [trace] [system.db.ar.CActiveRecord] WebConfig.findByPk()
+in D:\xampp\htdocs\cshop\protected\models\WebConfig.php (155)
+in D:\xampp\htdocs\cshop\protected\controllers\SiteController.php (7)
+in D:\xampp\htdocs\cshop\index.php (15)
+2016/05/22 19:01:25 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\xampp\htdocs\cshop\protected\models\WebConfig.php (155)
+in D:\xampp\htdocs\cshop\protected\controllers\SiteController.php (7)
+in D:\xampp\htdocs\cshop\index.php (15)
+2016/05/22 19:01:25 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `web_config`
+in D:\xampp\htdocs\cshop\protected\models\WebConfig.php (155)
+in D:\xampp\htdocs\cshop\protected\controllers\SiteController.php (7)
+in D:\xampp\htdocs\cshop\index.php (15)
+2016/05/22 19:01:26 [trace] [system.db.ar.CActiveRecord] Tag.findAll()
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\site\error.php (15)
+in D:\xampp\htdocs\cshop\protected\controllers\SiteController.php (62)
+2016/05/22 19:01:26 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\site\error.php (15)
+in D:\xampp\htdocs\cshop\protected\controllers\SiteController.php (62)
+2016/05/22 19:01:26 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tag`
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\site\error.php (15)
+in D:\xampp\htdocs\cshop\protected\controllers\SiteController.php (62)
+2016/05/22 19:01:26 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tag`
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\site\error.php (15)
+in D:\xampp\htdocs\cshop\protected\controllers\SiteController.php (62)
+2016/05/22 19:01:26 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tag` `t` WHERE display_home = 1 ORDER BY id DESC
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\site\error.php (15)
+in D:\xampp\htdocs\cshop\protected\controllers\SiteController.php (62)
+2016/05/22 19:03:07 [trace] [system.db.ar.CActiveRecord] WebConfig.findByPk()
+in D:\xampp\htdocs\cshop\protected\models\WebConfig.php (155)
+in D:\xampp\htdocs\cshop\protected\controllers\SiteController.php (7)
+in D:\xampp\htdocs\cshop\index.php (15)
+2016/05/22 19:03:07 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\xampp\htdocs\cshop\protected\models\WebConfig.php (155)
+in D:\xampp\htdocs\cshop\protected\controllers\SiteController.php (7)
+in D:\xampp\htdocs\cshop\index.php (15)
+2016/05/22 19:03:07 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `web_config`
+in D:\xampp\htdocs\cshop\protected\models\WebConfig.php (155)
+in D:\xampp\htdocs\cshop\protected\controllers\SiteController.php (7)
+in D:\xampp\htdocs\cshop\index.php (15)
+2016/05/22 19:03:07 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `web_config`
+in D:\xampp\htdocs\cshop\protected\models\WebConfig.php (155)
+in D:\xampp\htdocs\cshop\protected\controllers\SiteController.php (7)
+in D:\xampp\htdocs\cshop\index.php (15)
+2016/05/22 19:03:07 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `web_config` `t` WHERE `t`.`id`=1 LIMIT 1
+in D:\xampp\htdocs\cshop\protected\models\WebConfig.php (155)
+in D:\xampp\htdocs\cshop\protected\controllers\SiteController.php (7)
+in D:\xampp\htdocs\cshop\index.php (15)
+2016/05/22 19:03:07 [trace] [system.db.ar.CActiveRecord] Tag.findAll()
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\right_block.php (7)
+in D:\xampp\htdocs\cshop\protected\views\site\index.php (182)
+2016/05/22 19:03:07 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tag`
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\right_block.php (7)
+in D:\xampp\htdocs\cshop\protected\views\site\index.php (182)
+2016/05/22 19:03:07 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tag`
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\right_block.php (7)
+in D:\xampp\htdocs\cshop\protected\views\site\index.php (182)
+2016/05/22 19:03:07 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tag` `t` WHERE display_home = 1 ORDER BY id DESC
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\right_block.php (7)
+in D:\xampp\htdocs\cshop\protected\views\site\index.php (182)
+2016/05/22 19:03:08 [trace] [system.db.ar.CActiveRecord] Tag.findAll()
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\site\error.php (15)
+in D:\xampp\htdocs\cshop\protected\controllers\SiteController.php (62)
+2016/05/22 19:03:08 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\site\error.php (15)
+in D:\xampp\htdocs\cshop\protected\controllers\SiteController.php (62)
+2016/05/22 19:03:08 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tag`
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\site\error.php (15)
+in D:\xampp\htdocs\cshop\protected\controllers\SiteController.php (62)
+2016/05/22 19:03:08 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tag`
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\site\error.php (15)
+in D:\xampp\htdocs\cshop\protected\controllers\SiteController.php (62)
+2016/05/22 19:03:08 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tag` `t` WHERE display_home = 1 ORDER BY id DESC
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\site\error.php (15)
+in D:\xampp\htdocs\cshop\protected\controllers\SiteController.php (62)
+2016/05/22 19:03:20 [trace] [system.db.ar.CActiveRecord] Tag.findAll()
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\site\error.php (15)
+in D:\xampp\htdocs\cshop\protected\controllers\SiteController.php (62)
+2016/05/22 19:03:20 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\site\error.php (15)
+in D:\xampp\htdocs\cshop\protected\controllers\SiteController.php (62)
+2016/05/22 19:03:20 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tag`
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\site\error.php (15)
+in D:\xampp\htdocs\cshop\protected\controllers\SiteController.php (62)
+2016/05/22 19:03:20 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tag`
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\site\error.php (15)
+in D:\xampp\htdocs\cshop\protected\controllers\SiteController.php (62)
+2016/05/22 19:03:20 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tag` `t` WHERE display_home = 1 ORDER BY id DESC
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\site\error.php (15)
+in D:\xampp\htdocs\cshop\protected\controllers\SiteController.php (62)
+2016/05/22 19:03:26 [trace] [system.db.ar.CActiveRecord] Member.findByAttributes()
+in D:\xampp\htdocs\cshop\protected\modules\admin\components\UserIdentity.php (26)
+in D:\xampp\htdocs\cshop\protected\modules\admin\models\LoginForm.php (56)
+in D:\xampp\htdocs\cshop\protected\modules\admin\controllers\DefaultController.php (54)
+2016/05/22 19:03:26 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\xampp\htdocs\cshop\protected\modules\admin\components\UserIdentity.php (26)
+in D:\xampp\htdocs\cshop\protected\modules\admin\models\LoginForm.php (56)
+in D:\xampp\htdocs\cshop\protected\modules\admin\controllers\DefaultController.php (54)
+2016/05/22 19:03:26 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `member`
+in D:\xampp\htdocs\cshop\protected\modules\admin\components\UserIdentity.php (26)
+in D:\xampp\htdocs\cshop\protected\modules\admin\models\LoginForm.php (56)
+in D:\xampp\htdocs\cshop\protected\modules\admin\controllers\DefaultController.php (54)
+2016/05/22 19:03:26 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `member`
+in D:\xampp\htdocs\cshop\protected\modules\admin\components\UserIdentity.php (26)
+in D:\xampp\htdocs\cshop\protected\modules\admin\models\LoginForm.php (56)
+in D:\xampp\htdocs\cshop\protected\modules\admin\controllers\DefaultController.php (54)
+2016/05/22 19:03:26 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `member` `t` WHERE `t`.`user_name`=:yp0 AND `t`.`password`=:yp1 LIMIT 1
+in D:\xampp\htdocs\cshop\protected\modules\admin\components\UserIdentity.php (26)
+in D:\xampp\htdocs\cshop\protected\modules\admin\models\LoginForm.php (56)
+in D:\xampp\htdocs\cshop\protected\modules\admin\controllers\DefaultController.php (54)
+2016/05/22 19:03:45 [trace] [system.db.ar.CActiveRecord] Tag.findAll()
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\right_block.php (7)
+in D:\xampp\htdocs\cshop\protected\views\site\index.php (182)
+2016/05/22 19:03:45 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\right_block.php (7)
+in D:\xampp\htdocs\cshop\protected\views\site\index.php (182)
+2016/05/22 19:03:45 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tag`
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\right_block.php (7)
+in D:\xampp\htdocs\cshop\protected\views\site\index.php (182)
+2016/05/22 19:03:45 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tag`
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\right_block.php (7)
+in D:\xampp\htdocs\cshop\protected\views\site\index.php (182)
+2016/05/22 19:03:45 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tag` `t` WHERE display_home = 1 ORDER BY id DESC
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\right_block.php (7)
+in D:\xampp\htdocs\cshop\protected\views\site\index.php (182)
+2016/05/22 19:03:46 [trace] [system.db.ar.CActiveRecord] Tag.findAll()
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\site\error.php (15)
+in D:\xampp\htdocs\cshop\protected\controllers\SiteController.php (62)
+2016/05/22 19:03:46 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\site\error.php (15)
+in D:\xampp\htdocs\cshop\protected\controllers\SiteController.php (62)
+2016/05/22 19:03:46 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tag`
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\site\error.php (15)
+in D:\xampp\htdocs\cshop\protected\controllers\SiteController.php (62)
+2016/05/22 19:03:46 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tag`
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\site\error.php (15)
+in D:\xampp\htdocs\cshop\protected\controllers\SiteController.php (62)
+2016/05/22 19:03:46 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tag` `t` WHERE display_home = 1 ORDER BY id DESC
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\site\error.php (15)
+in D:\xampp\htdocs\cshop\protected\controllers\SiteController.php (62)
+2016/05/22 19:07:34 [trace] [system.db.ar.CActiveRecord] Tag.findAll()
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\right_block.php (7)
+in D:\xampp\htdocs\cshop\protected\views\site\index.php (182)
+2016/05/22 19:07:34 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\right_block.php (7)
+in D:\xampp\htdocs\cshop\protected\views\site\index.php (182)
+2016/05/22 19:07:34 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tag`
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\right_block.php (7)
+in D:\xampp\htdocs\cshop\protected\views\site\index.php (182)
+2016/05/22 19:07:34 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tag`
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\right_block.php (7)
+in D:\xampp\htdocs\cshop\protected\views\site\index.php (182)
+2016/05/22 19:07:34 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tag` `t` WHERE display_home = 1 ORDER BY id DESC
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\right_block.php (7)
+in D:\xampp\htdocs\cshop\protected\views\site\index.php (182)
+2016/05/22 19:07:34 [trace] [system.db.ar.CActiveRecord] Tag.findAll()
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\site\error.php (15)
+in D:\xampp\htdocs\cshop\protected\controllers\SiteController.php (62)
+2016/05/22 19:07:34 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\site\error.php (15)
+in D:\xampp\htdocs\cshop\protected\controllers\SiteController.php (62)
+2016/05/22 19:07:34 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tag`
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\site\error.php (15)
+in D:\xampp\htdocs\cshop\protected\controllers\SiteController.php (62)
+2016/05/22 19:07:34 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tag`
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\site\error.php (15)
+in D:\xampp\htdocs\cshop\protected\controllers\SiteController.php (62)
+2016/05/22 19:07:34 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tag` `t` WHERE display_home = 1 ORDER BY id DESC
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\site\error.php (15)
+in D:\xampp\htdocs\cshop\protected\controllers\SiteController.php (62)
+2016/05/22 19:10:38 [trace] [system.db.ar.CActiveRecord] Tag.findAll()
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\right_block.php (7)
+in D:\xampp\htdocs\cshop\protected\views\site\index.php (182)
+2016/05/22 19:10:38 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\right_block.php (7)
+in D:\xampp\htdocs\cshop\protected\views\site\index.php (182)
+2016/05/22 19:10:38 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tag`
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\right_block.php (7)
+in D:\xampp\htdocs\cshop\protected\views\site\index.php (182)
+2016/05/22 19:10:38 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tag`
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\right_block.php (7)
+in D:\xampp\htdocs\cshop\protected\views\site\index.php (182)
+2016/05/22 19:10:38 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tag` `t` WHERE display_home = 1 ORDER BY id DESC
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\right_block.php (7)
+in D:\xampp\htdocs\cshop\protected\views\site\index.php (182)
+2016/05/22 19:10:38 [trace] [system.db.ar.CActiveRecord] Tag.findAll()
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\site\error.php (15)
+in D:\xampp\htdocs\cshop\protected\controllers\SiteController.php (62)
+2016/05/22 19:10:38 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\site\error.php (15)
+in D:\xampp\htdocs\cshop\protected\controllers\SiteController.php (62)
+2016/05/22 19:10:38 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tag`
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\site\error.php (15)
+in D:\xampp\htdocs\cshop\protected\controllers\SiteController.php (62)
+2016/05/22 19:10:38 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tag`
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\site\error.php (15)
+in D:\xampp\htdocs\cshop\protected\controllers\SiteController.php (62)
+2016/05/22 19:10:38 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tag` `t` WHERE display_home = 1 ORDER BY id DESC
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\site\error.php (15)
+in D:\xampp\htdocs\cshop\protected\controllers\SiteController.php (62)
+2016/05/22 19:11:29 [trace] [system.db.ar.CActiveRecord] Tag.findAll()
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\right_block.php (7)
+in D:\xampp\htdocs\cshop\protected\views\site\index.php (182)
+2016/05/22 19:11:29 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\right_block.php (7)
+in D:\xampp\htdocs\cshop\protected\views\site\index.php (182)
+2016/05/22 19:11:29 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tag`
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\right_block.php (7)
+in D:\xampp\htdocs\cshop\protected\views\site\index.php (182)
+2016/05/22 19:11:29 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tag`
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\right_block.php (7)
+in D:\xampp\htdocs\cshop\protected\views\site\index.php (182)
+2016/05/22 19:11:29 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tag` `t` WHERE display_home = 1 ORDER BY id DESC
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\right_block.php (7)
+in D:\xampp\htdocs\cshop\protected\views\site\index.php (182)
+2016/05/22 19:11:30 [trace] [system.db.ar.CActiveRecord] Tag.findAll()
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\site\error.php (15)
+in D:\xampp\htdocs\cshop\protected\controllers\SiteController.php (62)
+2016/05/22 19:11:30 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\site\error.php (15)
+in D:\xampp\htdocs\cshop\protected\controllers\SiteController.php (62)
+2016/05/22 19:11:30 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tag`
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\site\error.php (15)
+in D:\xampp\htdocs\cshop\protected\controllers\SiteController.php (62)
+2016/05/22 19:11:30 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tag`
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\site\error.php (15)
+in D:\xampp\htdocs\cshop\protected\controllers\SiteController.php (62)
+2016/05/22 19:11:30 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tag` `t` WHERE display_home = 1 ORDER BY id DESC
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\site\error.php (15)
+in D:\xampp\htdocs\cshop\protected\controllers\SiteController.php (62)
+2016/05/22 21:22:27 [trace] [system.db.ar.CActiveRecord] Functional.findAllByAttributes()
+in D:\xampp\htdocs\cshop\protected\modules\admin\models\Functional.php (129)
+in D:\xampp\htdocs\cshop\protected\modules\admin\models\Functional.php (144)
+in D:\xampp\htdocs\cshop\protected\modules\admin\controllers\ProductController.php (25)
+2016/05/22 21:22:27 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\xampp\htdocs\cshop\protected\modules\admin\models\Functional.php (129)
+in D:\xampp\htdocs\cshop\protected\modules\admin\models\Functional.php (144)
+in D:\xampp\htdocs\cshop\protected\modules\admin\controllers\ProductController.php (25)
+2016/05/22 21:22:27 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `functional`
+in D:\xampp\htdocs\cshop\protected\modules\admin\models\Functional.php (129)
+in D:\xampp\htdocs\cshop\protected\modules\admin\models\Functional.php (144)
+in D:\xampp\htdocs\cshop\protected\modules\admin\controllers\ProductController.php (25)
+2016/05/22 21:22:28 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `functional`
+in D:\xampp\htdocs\cshop\protected\modules\admin\models\Functional.php (129)
+in D:\xampp\htdocs\cshop\protected\modules\admin\models\Functional.php (144)
+in D:\xampp\htdocs\cshop\protected\modules\admin\controllers\ProductController.php (25)
+2016/05/22 21:22:28 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `functional` `t` WHERE `t`.`controller_id`=:yp0
+in D:\xampp\htdocs\cshop\protected\modules\admin\models\Functional.php (129)
+in D:\xampp\htdocs\cshop\protected\modules\admin\models\Functional.php (144)
+in D:\xampp\htdocs\cshop\protected\modules\admin\controllers\ProductController.php (25)
+2016/05/22 21:22:28 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `product`
+in D:\xampp\htdocs\cshop\protected\modules\admin\controllers\ProductController.php (121)
+in D:\xampp\htdocs\cshop\index.php (15)
+2016/05/22 21:22:28 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `product`
+in D:\xampp\htdocs\cshop\protected\modules\admin\controllers\ProductController.php (121)
+in D:\xampp\htdocs\cshop\index.php (15)
+2016/05/22 21:22:28 [trace] [system.db.ar.CActiveRecord] Product.count()
+in D:\xampp\htdocs\cshop\protected\modules\admin\views\product\admin.php (70)
+in D:\xampp\htdocs\cshop\protected\modules\admin\controllers\ProductController.php (128)
+in D:\xampp\htdocs\cshop\index.php (15)
+2016/05/22 21:22:28 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM `product` `t`
+in D:\xampp\htdocs\cshop\protected\modules\admin\views\product\admin.php (70)
+in D:\xampp\htdocs\cshop\protected\modules\admin\controllers\ProductController.php (128)
+in D:\xampp\htdocs\cshop\index.php (15)
+2016/05/22 21:22:28 [trace] [system.db.ar.CActiveRecord] Product.findAll()
+in D:\xampp\htdocs\cshop\protected\modules\admin\views\product\admin.php (70)
+in D:\xampp\htdocs\cshop\protected\modules\admin\controllers\ProductController.php (128)
+in D:\xampp\htdocs\cshop\index.php (15)
+2016/05/22 21:22:28 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `product` `t` ORDER BY id DESC LIMIT 10
+in D:\xampp\htdocs\cshop\protected\modules\admin\views\product\admin.php (70)
+in D:\xampp\htdocs\cshop\protected\modules\admin\controllers\ProductController.php (128)
+in D:\xampp\htdocs\cshop\index.php (15)
+2016/05/22 21:22:30 [trace] [system.db.ar.CActiveRecord] Functional.findAllByAttributes()
+in D:\xampp\htdocs\cshop\protected\modules\admin\models\Functional.php (129)
+in D:\xampp\htdocs\cshop\protected\modules\admin\models\Functional.php (144)
+in D:\xampp\htdocs\cshop\protected\modules\admin\controllers\ProductController.php (25)
+2016/05/22 21:22:30 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\xampp\htdocs\cshop\protected\modules\admin\models\Functional.php (129)
+in D:\xampp\htdocs\cshop\protected\modules\admin\models\Functional.php (144)
+in D:\xampp\htdocs\cshop\protected\modules\admin\controllers\ProductController.php (25)
+2016/05/22 21:22:30 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `functional`
+in D:\xampp\htdocs\cshop\protected\modules\admin\models\Functional.php (129)
+in D:\xampp\htdocs\cshop\protected\modules\admin\models\Functional.php (144)
+in D:\xampp\htdocs\cshop\protected\modules\admin\controllers\ProductController.php (25)
+2016/05/22 21:22:30 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `functional`
+in D:\xampp\htdocs\cshop\protected\modules\admin\models\Functional.php (129)
+in D:\xampp\htdocs\cshop\protected\modules\admin\models\Functional.php (144)
+in D:\xampp\htdocs\cshop\protected\modules\admin\controllers\ProductController.php (25)
+2016/05/22 21:22:30 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `functional` `t` WHERE `t`.`controller_id`=:yp0
+in D:\xampp\htdocs\cshop\protected\modules\admin\models\Functional.php (129)
+in D:\xampp\htdocs\cshop\protected\modules\admin\models\Functional.php (144)
+in D:\xampp\htdocs\cshop\protected\modules\admin\controllers\ProductController.php (25)
+2016/05/22 21:22:30 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `product`
+in D:\xampp\htdocs\cshop\protected\modules\admin\controllers\ProductController.php (46)
+in D:\xampp\htdocs\cshop\index.php (15)
+2016/05/22 21:22:30 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `product`
+in D:\xampp\htdocs\cshop\protected\modules\admin\controllers\ProductController.php (46)
+in D:\xampp\htdocs\cshop\index.php (15)
+2016/05/22 21:22:30 [trace] [system.db.ar.CActiveRecord] Category.findAll()
+in D:\xampp\htdocs\cshop\protected\models\Category.php (124)
+in D:\xampp\htdocs\cshop\protected\models\Category.php (213)
+in D:\xampp\htdocs\cshop\protected\modules\admin\views\product\_form.php (90)
+2016/05/22 21:22:30 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `category`
+in D:\xampp\htdocs\cshop\protected\models\Category.php (124)
+in D:\xampp\htdocs\cshop\protected\models\Category.php (213)
+in D:\xampp\htdocs\cshop\protected\modules\admin\views\product\_form.php (90)
+2016/05/22 21:22:30 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `category`
+in D:\xampp\htdocs\cshop\protected\models\Category.php (124)
+in D:\xampp\htdocs\cshop\protected\models\Category.php (213)
+in D:\xampp\htdocs\cshop\protected\modules\admin\views\product\_form.php (90)
+2016/05/22 21:22:30 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `category` `t`
+in D:\xampp\htdocs\cshop\protected\models\Category.php (124)
+in D:\xampp\htdocs\cshop\protected\models\Category.php (213)
+in D:\xampp\htdocs\cshop\protected\modules\admin\views\product\_form.php (90)
+2016/05/22 21:23:03 [trace] [system.db.ar.CActiveRecord] Functional.findAllByAttributes()
+in D:\xampp\htdocs\cshop\protected\modules\admin\models\Functional.php (129)
+in D:\xampp\htdocs\cshop\protected\modules\admin\models\Functional.php (144)
+in D:\xampp\htdocs\cshop\protected\modules\admin\controllers\ProductController.php (25)
+2016/05/22 21:23:03 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\xampp\htdocs\cshop\protected\modules\admin\models\Functional.php (129)
+in D:\xampp\htdocs\cshop\protected\modules\admin\models\Functional.php (144)
+in D:\xampp\htdocs\cshop\protected\modules\admin\controllers\ProductController.php (25)
+2016/05/22 21:23:03 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `functional`
+in D:\xampp\htdocs\cshop\protected\modules\admin\models\Functional.php (129)
+in D:\xampp\htdocs\cshop\protected\modules\admin\models\Functional.php (144)
+in D:\xampp\htdocs\cshop\protected\modules\admin\controllers\ProductController.php (25)
+2016/05/22 21:23:03 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `functional`
+in D:\xampp\htdocs\cshop\protected\modules\admin\models\Functional.php (129)
+in D:\xampp\htdocs\cshop\protected\modules\admin\models\Functional.php (144)
+in D:\xampp\htdocs\cshop\protected\modules\admin\controllers\ProductController.php (25)
+2016/05/22 21:23:03 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `functional` `t` WHERE `t`.`controller_id`=:yp0
+in D:\xampp\htdocs\cshop\protected\modules\admin\models\Functional.php (129)
+in D:\xampp\htdocs\cshop\protected\modules\admin\models\Functional.php (144)
+in D:\xampp\htdocs\cshop\protected\modules\admin\controllers\ProductController.php (25)
+2016/05/22 21:23:03 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `product`
+in D:\xampp\htdocs\cshop\protected\modules\admin\controllers\ProductController.php (46)
+in D:\xampp\htdocs\cshop\index.php (15)
+2016/05/22 21:23:03 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `product`
+in D:\xampp\htdocs\cshop\protected\modules\admin\controllers\ProductController.php (46)
+in D:\xampp\htdocs\cshop\index.php (15)
+2016/05/22 21:23:09 [trace] [system.db.ar.CActiveRecord] Functional.findAllByAttributes()
+in D:\xampp\htdocs\cshop\protected\modules\admin\models\Functional.php (129)
+in D:\xampp\htdocs\cshop\protected\modules\admin\models\Functional.php (144)
+in D:\xampp\htdocs\cshop\protected\modules\admin\controllers\ProductController.php (25)
+2016/05/22 21:23:09 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\xampp\htdocs\cshop\protected\modules\admin\models\Functional.php (129)
+in D:\xampp\htdocs\cshop\protected\modules\admin\models\Functional.php (144)
+in D:\xampp\htdocs\cshop\protected\modules\admin\controllers\ProductController.php (25)
+2016/05/22 21:23:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `functional`
+in D:\xampp\htdocs\cshop\protected\modules\admin\models\Functional.php (129)
+in D:\xampp\htdocs\cshop\protected\modules\admin\models\Functional.php (144)
+in D:\xampp\htdocs\cshop\protected\modules\admin\controllers\ProductController.php (25)
+2016/05/22 21:23:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `functional`
+in D:\xampp\htdocs\cshop\protected\modules\admin\models\Functional.php (129)
+in D:\xampp\htdocs\cshop\protected\modules\admin\models\Functional.php (144)
+in D:\xampp\htdocs\cshop\protected\modules\admin\controllers\ProductController.php (25)
+2016/05/22 21:23:09 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `functional` `t` WHERE `t`.`controller_id`=:yp0
+in D:\xampp\htdocs\cshop\protected\modules\admin\models\Functional.php (129)
+in D:\xampp\htdocs\cshop\protected\modules\admin\models\Functional.php (144)
+in D:\xampp\htdocs\cshop\protected\modules\admin\controllers\ProductController.php (25)
+2016/05/22 21:23:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `product`
+in D:\xampp\htdocs\cshop\protected\modules\admin\controllers\ProductController.php (46)
+in D:\xampp\htdocs\cshop\index.php (15)
+2016/05/22 21:23:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `product`
+in D:\xampp\htdocs\cshop\protected\modules\admin\controllers\ProductController.php (46)
+in D:\xampp\htdocs\cshop\index.php (15)
+2016/05/22 21:23:10 [trace] [system.db.ar.CActiveRecord] Tag.findAll()
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\site\error.php (15)
+in D:\xampp\htdocs\cshop\protected\controllers\SiteController.php (62)
+2016/05/22 21:23:10 [trace] [system.db.CDbConnection] Opening DB connection
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\site\error.php (15)
+in D:\xampp\htdocs\cshop\protected\controllers\SiteController.php (62)
+2016/05/22 21:23:10 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tag`
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\site\error.php (15)
+in D:\xampp\htdocs\cshop\protected\controllers\SiteController.php (62)
+2016/05/22 21:23:10 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tag`
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\site\error.php (15)
+in D:\xampp\htdocs\cshop\protected\controllers\SiteController.php (62)
+2016/05/22 21:23:10 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tag` `t` WHERE display_home = 1 ORDER BY id DESC
+in D:\xampp\htdocs\cshop\protected\views\layouts\blocks\tags.php (12)
+in D:\xampp\htdocs\cshop\protected\views\site\error.php (15)
+in D:\xampp\htdocs\cshop\protected\controllers\SiteController.php (62)
