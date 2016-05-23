@@ -93,4 +93,6 @@ class NewsTag extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+    
+    
 }

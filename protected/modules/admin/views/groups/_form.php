@@ -31,29 +31,45 @@
 		<?php echo $form->error($model,'des'); ?>
 	</div>
    
-   <div class="row">
-      <?php 
-         $list_functional = CHtml::listData(Functional::model()->findAll(),'id','name');
-         $str_fnc_id = '';
-         if($model->id != null){
-            $fnc_selected = GroupFunctional::model()->findAllByAttributes(array(
+   <div class="md-card-content">
+        <?php 
+        $list_all = Functional::model()->getMultilevel();
+        
+        if($model->id != null){
+            $list_selected = GroupFunctional::model()->findAllByAttributes(array(
                'group_id' => $model->id,
-            ));
-            
-            if(count($fnc_selected) > 0){
-               foreach($fnc_selected as $value){
-                  $str_fnc_id .= $value->functional_id .',';
-               }
-               $str_fnc_id = substr($str_fnc_id,0,-1);
-            }
-         }
-      ?>
-      <?php echo CHtml::label('Quyền thao tác','film_cat')?>
-      <?php echo CHtml::dropDownList('Groups[functional]','',$list_functional,array(
-         'multiple' => 'multiple',
-         'style' => 'width:700px'
-      ));?>
-   </div>
+            ));    
+        }else{
+            $list_selected = array();
+        }
+        
+        
+        if(count($list_all) > 0){?>
+            <ul class="checklist">
+                <?php foreach($list_all as $value){?>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="categories[]" <?php echo (in_array($value['id'],$list_selected)) ? 'checked' : ''?> value="<?php echo $value['id']?>" />
+                            <?php echo $value['name']?>
+                        </label>
+                        <?php if(isset($value['sub'])){?>
+                        <ul class="children">
+                            <?php foreach($value['sub'] as $sub){?>
+                                <li>
+                                    <label>
+                                        <input type="checkbox" name="categories[]" <?php echo (in_array($sub['id'],$list_selected)) ? 'checked' : ''?> value="<?php echo $sub['id']?>" />
+                                        <?php echo $sub['name']?>
+                                    </label>
+                                </li>
+                            <?php }?>
+                        </ul>
+                        <?php }?>
+                    </li>
+                <?php }?>
+            </ul>
+        <?php }
+        ?>
+    </div>
     
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
@@ -64,11 +80,6 @@
 </div><!-- form -->
 <script>
    $(document).ready(function(){
-      $("#Groups_functional").val([<?php echo $str_fnc_id?>]).select2({
-         lang:'vi',
-         allowClear: true,
-      });
-      
       
    });
 </script>

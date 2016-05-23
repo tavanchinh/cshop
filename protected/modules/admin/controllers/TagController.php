@@ -153,6 +153,7 @@ class TagController extends Controller
         $result = array();
         //Nếu người dùng nhập keyword thì thực hiện search bằng solr
         if ($keyword != '""') {
+            /*
             $result_solr = Yii::app()->tagSearch->get('tname:' . $keyword, 0, 15);
 
             if ($result_solr && $result_solr->response->numFound > 0) {
@@ -160,6 +161,17 @@ class TagController extends Controller
                 foreach ($result_solr->response->docs as $value) {
                     $tmp['id'] = $value->id;
                     $tmp['label'] = $value->tname;
+                    $result[] = $tmp;
+                }
+            }
+            */
+            
+            $sql = "SELECT * FROM tag WHERE name LIKE '%".$keyword."%'";
+            $result_sql = Yii::app()->db->createCommand($sql)->queryAll();
+            if(count($result_sql) > 0){
+                foreach($result_sql as $value){
+                    $tmp['id'] = $value['id'];
+                    $tmp['label'] = $value['name'];
                     $result[] = $tmp;
                 }
             }

@@ -1,21 +1,21 @@
 <?php
 
 /**
- * This is the model class for table "product_tag".
+ * This is the model class for table "product_category".
  *
- * The followings are the available columns in table 'product_tag':
+ * The followings are the available columns in table 'product_category':
  * @property integer $id
  * @property integer $product_id
- * @property integer $tag_id
+ * @property integer $cat_id
  */
-class ProductTag extends CActiveRecord
+class ProductCategory extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'product_tag';
+		return 'product_category';
 	}
 
 	/**
@@ -26,10 +26,10 @@ class ProductTag extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('product_id, tag_id', 'numerical', 'integerOnly'=>true),
+			array('product_id, cat_id', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, product_id, tag_id', 'safe', 'on'=>'search'),
+			array('id, product_id, cat_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -52,7 +52,7 @@ class ProductTag extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'product_id' => 'Product',
-			'tag_id' => 'Tag',
+			'cat_id' => 'Cat',
 		);
 	}
 
@@ -76,7 +76,7 @@ class ProductTag extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('product_id',$this->product_id);
-		$criteria->compare('tag_id',$this->tag_id);
+		$criteria->compare('cat_id',$this->cat_id);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -90,25 +90,26 @@ class ProductTag extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return ProductTag the static model class
+	 * @return ProductCategory the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
 	}
     
+    
     /**
      * Add to table product_category
     */
-    public function QuickAdd($product_id,$list_tag,$unique = false){
+    public function QuickAdd($product_id,$list_cate,$unique = false){
         $execute = false;
         
-        if(count($list_tag) > 0){
+        if(count($list_cate) > 0){
             // Kiểm tra trùng lặp
             if($unique){
                 $delete_not_id = '-1';
-                $sql = "INSERT IGNORE INTO product_tag(product_id,tag_id) VALUES";
-                foreach($list_tag as $value){
+                $sql = "INSERT IGNORE INTO product_category(product_id,cat_id) VALUES";
+                foreach($list_cate as $value){
                     if($value > 0){
                         $sql .= "($product_id,$value),";
                         $execute = true;
@@ -116,24 +117,26 @@ class ProductTag extends CActiveRecord
                     }
                 }
                 if($execute){
-                    $sql = substr($sql,0,-1);;
+                    $sql = substr($sql,0,-1);
                     Yii::app()->db->createCommand($sql)->execute();
-                    $sql_delete = "DELETE FROM product_tag WHERE product_id=$product_id AND tag_id NOT IN ($delete_not_id)";
+                    $sql_delete = "DELETE FROM product_category WHERE product_id=$product_id AND cat_id NOT IN ($delete_not_id)";
                     Yii::app()->db->createCommand($sql_delete)->execute();
                 }
             }else{
-                $sql = "INSERT INTO product_tag(product_id,tag_id) VALUES";
-                foreach($list_tag as $value){
+                $sql = "INSERT INTO product_category(product_id,cat_id) VALUES";
+                foreach($list_cate as $value){
                     if($value > 0){
                         $sql .= "($product_id,$value),";
                         $execute = true;
                     }
                 }
                 if($execute){
-                    $sql = substr($sql,0,-1);;
+                    $sql = substr($sql,0,-1);
                     Yii::app()->db->createCommand($sql)->execute();
                 }
             }
         }
     }
+    
+    
 }

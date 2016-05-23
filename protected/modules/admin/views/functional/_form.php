@@ -4,7 +4,7 @@
 /* @var $form CActiveForm */
 ?>
 
-<div class="form">
+<div style="clear: both;">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'functional-form',
@@ -18,20 +18,30 @@
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
 	<?php echo $form->errorSummary($model); ?>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'name'); ?>
-		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'name'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'url'); ?>
-		<?php echo $form->textField($model,'url',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'url'); ?>
-	</div>
-	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+    <div class="md-card">
+        <div class="md-card-content">
+            <div class="row">
+        		<?php echo $form->labelEx($model,'name'); ?>
+        		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>255)); ?>
+        		<?php echo $form->error($model,'name'); ?>
+        	</div>
+        
+        	<div class="row">
+        		<?php echo $form->labelEx($model,'url'); ?>
+        		<?php echo $form->textField($model,'url',array('size'=>60,'maxlength'=>255)); ?>
+        		<?php echo $form->error($model,'url'); ?>
+        	</div>
+            
+            <div class="row">
+                <?php $list_parent = Functional::model()->getListParent();?>
+                <?php echo $form->labelEx($model,'parent_id'); ?>
+        		<?php echo $form->dropDownList($model,'parent_id',$list_parent,array('empty' => '-- Không chọn --')); ?>
+            </div>
+        </div>
+    </div>
+	
+	<div class="row buttons uk-text-right uk-margin-top">
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save',array('class' => 'md-btn md-btn-primary')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
