@@ -13,19 +13,29 @@
         array(
             'text' => 'User',
             'icon' => '<i class="material-icons">perm_identity</i>',
-            'link' => '/'.$module.'/default',
+            'link' => '#',
             'list_controller_actions' => array(
-                'default_index',
+                'member_admin',
+                'member_update',
+                'groups_admin',
+                'functional_admin',
+            ),
+            'sub' => array(
+                array('link' => '/'.$module.'/member/admin','text' => 'Tất cả user','controller_action' => 'member_admin'),
+                array('link' => '/'.$module.'/member/create','text' => 'Thêm mới','controller_action' => 'member_create'),
+                array('link' => '/'.$module.'/groups/admin','text' => 'Quản lý nhóm','controller_action' => 'groups_admin'),
+                array('link' => '/'.$module.'/functional/admin','text' => 'Menu admin','controller_action' => 'functional_admin'),
             )
         ),
         
         array(
             'text' => 'Sản phẩm',
-            'icon' => '<i class="material-icons">shopping_cart</i>',
+            'icon' => '<i class="material-icons"></i>',
             'link' => '#',
             'list_controller_actions' => array(
                 'product_admin',
                 'product_create',
+                'product_update',
                 
             ),
             'sub' => array(
@@ -33,6 +43,7 @@
                 array('link' => '/'.$module.'/product/create','text' => 'Thêm mới','controller_action' => 'product_create'),
             )
         ),
+        /*
         array(
             'text' => 'Ban quản trị',
             'icon' => '<i class="material-icons">&#xE7FB;</i>',
@@ -55,7 +66,7 @@
                 array('link' => '/'.$module.'/cache/admin','text' => 'Quản lý cache','controller_action' => 'cache_admin'),
             )
         ),
-        
+        */
         array(
             'text' => 'Thể loại',
             'icon' => '<i class="material-icons">&#xE02F;</i>',
@@ -116,7 +127,7 @@
                 'ads_create',
             ),
             'sub' => array(
-                 array('link' => '/'.$module.'/webconfig/admin','text' => 'Web config','controller_action' => 'webconfig_admin'),
+                 array('link' => '/'.$module.'/webconfig/update/','text' => 'Web config','controller_action' => 'webconfig_update'),
                  array('link' => '/'.$module.'/slide/admin','text' => 'Quản lý slide','controller_action' => 'slide_admin'),
                  array('link' => '/'.$module.'/ads/admin','text' => 'Quản lý quảng cáo','controller_action' => 'ads_admin'),
             )

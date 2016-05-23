@@ -27,43 +27,7 @@ class MemberController extends Controller
         return $rules;
 	}
 
-	/**
-	 * Displays a particular model.
-	 * @param integer $id the ID of the model to be displayed
-	 */
-	public function actionView($id)
-	{
-		$list_lead_ctv = Member::model()->getListByGroupID(4); // Danh sách trưởng nhóm CTV
-        $list_ctv = Member::model()->getListByGroupID(5); //Danh sách cộng tác viên
-        $model = Member::model()->findByPk($id);
-        if(array_key_exists(Yii::app()->session['admin_id'],$list_lead_ctv) && array_key_exists($id,$list_ctv)){
-            if($model->parent_id != Yii::app()->session['admin_id']){
-                throw new CHttpException('403','Bạn không phải là người quản lý CTV này');
-            }    
-        }
-        
-        //Những dự án tham gia
-        $list_groups = Member::model()->getListGroup($id);
-        
-        $sql = "SELECT * FROM project WHERE id IN (SELECT project_id FROM project_member WHERE member_id = $id)";        
-        $list_project = Yii::app()->db->createCommand($sql)->queryAll();
-        
-        $sql = "SELECT a.*, b.id as pid,b.name as pname FROM issues a INNER JOIN project b ON a.project_id = b.id WHERE a.member_id = $id ORDER BY id DESC";
-        $list_issues = Yii::app()->db->createCommand($sql)->queryAll();
-        
-        $sql = "SELECT a.name, a.cat_id, a.project_id, b.* FROM issues a INNER JOIN issues_action b ON a.id = b.issue_id WHERE a.member_id =$id ORDER BY b.create_date DESC LIMIT 20";
-        $list_actions = Yii::app()->db->createCommand($sql)->queryAll();
-        
-        //CVarDumper::dump($list_groups,10,true);die;
-        $this->render('view',array(
-			'model'=>$this->loadModel($id),
-            'list_project' => $list_project,
-            'list_groups' => $list_groups,
-            'list_issues' => $list_issues,
-            'list_actions' => $list_actions,
-		));
-	}
-
+	
 	/**
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
@@ -99,16 +63,6 @@ class MemberController extends Controller
                      $member_group->save();      
                   }
                }
-               
-               //Cập nhật vào bảng project_member
-               if(isset($_POST['Member']['project'])){
-                  foreach($_POST['Member']['project'] as $value){
-                     $member_project = new ProjectMember();
-                     $member_project->member_id = $model->id;
-                     $member_project->project_id = $value;
-                     $member_project->save();      
-                  }
-               }
                $this->redirect(array('admin'));
             }
          }
@@ -128,14 +82,7 @@ class MemberController extends Controller
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
-        $list_lead_ctv = Member::model()->getListByGroupID(4); // Danh sách trưởng nhóm CTV
-        $list_ctv = Member::model()->getListByGroupID(5); //Danh sách cộng tác viên
         
-        if(array_key_exists(Yii::app()->session['admin_id'],$list_lead_ctv) && array_key_exists($model->id,$list_ctv)){
-            if($model->parent_id != Yii::app()->session['admin_id']){
-                throw new CHttpException('403','Bạn không phải là người quản lý CTV này');
-            }    
-        }
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
@@ -161,18 +108,6 @@ class MemberController extends Controller
                    }
                 }
             
-                //Cập nhật vào bảng project_member
-                ProjectMember::model()->deleteAllByAttributes(array(
-                   'member_id' => $id
-                ));
-                if(isset($_POST['Member']['project'])){
-                    foreach($_POST['Member']['project'] as $value){
-                        $member_project = new ProjectMember();
-                        $member_project->member_id = $model->id;
-                        $member_project->project_id = $value;
-                        $member_project->save();      
-                    }
-                }
             }
             $this->redirect(array('admin'));
 		}

@@ -85,7 +85,7 @@ class FunctionalController extends Controller
          $count_explode = count($explode_url);
          $model->controller_id = isset($explode_url[$count_explode-2]) ? $explode_url[$count_explode-2] : null;
          $model->action_id = isset($explode_url[$count_explode-1]) ? $explode_url[$count_explode-1] : null;
-         
+         //CVarDumper::dump($model->attributes,10,true);die();
          if($model->save())
 				$this->redirect(array('admin'));
 		}

@@ -220,4 +220,30 @@ class Product extends CActiveRecord
         return $list;
     }
     
+    /**
+     * Convert array option to json
+    */
+    public function encodeOptions($array){
+        $count = count($array['label']);
+        $list = array();
+        if($count > 0){
+            for($i = 0; $i < $count; $i++){
+                //CVarDumper::dump($array,10,true);die;
+                if($array['label'][$i] != ''){
+                    $tmp['label'] = $array['label'][$i];
+                    $tmp['value'] = $array['value'][$i];
+                    $list[] = $tmp;
+                }
+            }
+        }
+        return json_encode($list);
+    }
+    
+    /**
+     * Convert json to array
+    */
+    public function decodeOptions($options){
+        return json_decode($options,true);
+    }
+    
 }

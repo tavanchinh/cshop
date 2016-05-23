@@ -49,25 +49,46 @@ echo CHtml::hiddenField('continue',0);
             		<h3 class="md-card-toolbar-heading-text">Thuộc tính</h3>
                 </div>
                 <div class="md-card-content">
-                    <div class="row">
-                    	<?php echo $form->labelEx($model,'sku'); ?>
-                    	<?php echo $form->textField($model,'sku',array('size'=>60,'maxlength'=>255)); ?>
-                    	<?php echo $form->error($model,'sku'); ?>
-                    </div>
+                    <div id="product-option">
+                        <div class="row">
+                        	<?php echo $form->labelEx($model,'sku'); ?>
+                        	<?php echo $form->textField($model,'sku',array('size'=>60,'maxlength'=>255)); ?>
+                        	<?php echo $form->error($model,'sku'); ?>
+                        </div>
+                            
+                        <div class="row">
+                        	<?php echo $form->labelEx($model,'price'); ?>
+                        	<?php echo $form->textField($model,'price',array('placeholder' => 'đ')); ?>
+                        	<?php echo $form->error($model,'price'); ?>
+                        </div>
                         
-                    <div class="row">
-                    	<?php echo $form->labelEx($model,'price'); ?>
-                    	<?php echo $form->textField($model,'price',array('placeholder' => 'đ')); ?>
-                    	<?php echo $form->error($model,'price'); ?>
+                        <div class="row">
+                        	<?php echo $form->labelEx($model,'sale'); ?>
+                        	<?php echo $form->textField($model,'sale',array('placeholder' => '%')); ?>
+                        	<?php echo $form->error($model,'sale'); ?>
+                        </div>
+                        <?php $options = Product::model()->decodeOptions($model->custom_field);
+                        if($options !== null && is_array($options) && count($options) > 0){
+                            $i = 0;
+                            foreach($options as $opt){
+                                $i++;
+                                ?>
+                                <div class="row" id="option-<?php echo $i?>">
+                                    <label><?php echo $opt['label']?></label>
+                                    <input style="float: left;" type="text" name="Product[options][value][]" value="<?php echo $opt['value']?>" />
+                                    <a class="btn-remove-option" onclick="delete_option(<?php echo $i?>)" style="float: left;padding:10px" href="javascript:void(0)"><i class="material-icons uk-text-primary"></i></a>
+                                </div>
+                            <?php }
+                        }
+                        ?>
                     </div>
+                    <div class="uk-text-right">
+                        <span class="md-btn md-btn-success" id="btn-add-option">Thêm thuộc tính</span>
+                    </div>    
                     
-                    <div class="row">
-                    	<?php echo $form->labelEx($model,'sale'); ?>
-                    	<?php echo $form->textField($model,'sale',array('placeholder' => '%')); ?>
-                    	<?php echo $form->error($model,'sale'); ?>
-                    </div>
                     
                 </div>
+                
             </div>
             
             <div class="md-card">
@@ -374,8 +395,22 @@ echo CHtml::hiddenField('continue',0);
         });
         
         /*---- End select2 tag ----*/
+        
+        $("#btn-add-option").click(function(){
+            var html = '<div class="row">\
+                            <div style="width:100px;margin:0 20px 0 0" class="uk-float-left"><input style="max-width:100%;font-weight:bold" placeholder="Tiêu đề" type="text" name="Product[options][label][]"></div>\
+                            <input placeholder="Giá trị" type="text" name="Product[options][value][]">\
+                        </div>';
+            $("#product-option").append(html);
+                        
+        })
     });
-    
+    function delete_option(i){
+        var conf = confirm("Bạn có chắc chắn muốn xóa thuộc tính này ?");
+        if(conf){
+            $("#option-"+i).remove();
+        }
+    }
     
 </script>
 

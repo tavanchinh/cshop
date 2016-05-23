@@ -9,6 +9,7 @@
  * @property string $url
  * @property string $controller_id
  * @property string $action_id
+ * @property integer $parent_id
  */
 class Functional extends CActiveRecord
 {
@@ -26,14 +27,15 @@ class Functional extends CActiveRecord
 	public function rules()
 	{
 		// NOTE: you should only define rules for those attributes that
-		// will receive user inputs.
-		return array(
-			array('name, url', 'length', 'max'=>255),
-			array('controller_id, action_id', 'length', 'max'=>50),
-			// The following rule is used by search().
-			// @todo Please remove those attributes that should not be searched.
-			array('id, name, url, controller_id, action_id', 'safe', 'on'=>'search'),
-		);
+        // will receive user inputs.
+        return array(
+            array('parent_id', 'numerical', 'integerOnly'=>true),
+            array('name, url', 'length', 'max'=>255),
+            array('controller_id, action_id', 'length', 'max'=>50),
+            // The following rule is used by search().
+            // @todo Please remove those attributes that should not be searched.
+            array('id, name, url, controller_id, action_id, parent_id', 'safe', 'on'=>'search'),
+        );
 	}
 
 	/**
@@ -58,6 +60,7 @@ class Functional extends CActiveRecord
 			'url' => 'Url',
 			'controller_id' => 'Controller',
 			'action_id' => 'Action',
+            'parent_id' => 'Parent'
 		);
 	}
 
@@ -84,6 +87,7 @@ class Functional extends CActiveRecord
 		$criteria->compare('url',$this->url,true);
 		$criteria->compare('controller_id',$this->controller_id,true);
 		$criteria->compare('action_id',$this->action_id,true);
+        $criteria->compare('parent_id',$this->parent_id);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -163,4 +167,57 @@ class Functional extends CActiveRecord
       return $list;
       
    }
+   
+    /**
+     * Get all category
+     */
+    public function getAll()
+    {
+        $return = array();
+        $object = $this->findAll();
+        if (count($object) > 0) {
+            foreach ($object as $item) {
+                $return[$item['id']] = $item->attributes;
+            }
+        }
+        return $return;
+    }
+    /**
+     * Lay danh sach cat dang cay. Su dung de quy
+     */
+    public function getTree($all_cate, $parent_id = 0, $trees = array(0 =>'Không chọn'), $delimiter = '')
+    {
+        if (!$trees) {
+            $trees = array();
+        }
+        foreach ($all_cate as $key => $value) {
+            if ($value['parent_id'] == $parent_id) {
+                $trees[$value['id']] = $delimiter . $value['name'];
+                $trees = $this->getTree($all_cate, $value['id'], $trees, $delimiter . '--');
+            }
+
+        }
+        return $trees;
+    }
+    
+    
+    public function getMultilevel(){
+        $sql = "SELECT * FROM functional";
+        $data = array();
+        $list_cate = $this->getAll();
+        $tmp = array();
+        foreach($list_cate as $key=>$value){            
+            if($value['parent_id'] == 0){
+                $data[$key] = $value;
+            }else{
+                $tmp[$value['parent_id']][$value['id']] = $value;
+                $data[$value['parent_id']]['sub'] = $tmp[$value['parent_id']];
+            }
+        }
+        return $data;
+    }
+    
+    public function getListParent(){
+        return CHtml::listData(Functional::model()->findAllByAttributes(array('parent_id' => 0)),'id','name');
+    }
 }

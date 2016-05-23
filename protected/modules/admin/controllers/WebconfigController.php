@@ -2,8 +2,6 @@
 
 class WebconfigController extends Controller
 {
-	
-
 	/**
 	 * @return array action filters
 	 */
@@ -23,62 +21,34 @@ class WebconfigController extends Controller
 	public function accessRules()
 	{
 		$rules = Functional::model()->getPermmision($this->id);
-      return $rules;
+        return $rules;
 	}
 
-	/**
-	 * Displays a particular model.
-	 * @param integer $id the ID of the model to be displayed
-	 */
-	public function actionView($id)
-	{
-		$this->render('view',array(
-			'model'=>$this->loadModel($id),
-		));
-	}
-
-	/**
-	 * Creates a new model.
-	 * If creation is successful, the browser will be redirected to the 'view' page.
-	 */
-	public function actionCreate()
-	{
-		$model=new WebConfig;
-
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
-		if(isset($_POST['WebConfig']))
-		{
-			$model->attributes=$_POST['WebConfig'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
-		}
-
-		$this->render('create',array(
-			'model'=>$model,
-		));
-	}
+	
 
 	/**
 	 * Updates a particular model.
 	 * If update is successful, the browser will be redirected to the 'view' page.
 	 * @param integer $id the ID of the model to be updated
 	 */
-	public function actionUpdate($id)
+	public function actionUpdate()
 	{
-		$model=$this->loadModel($id);
+		$id = 1;
+        $model=$this->loadModel($id);
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-
+        
 		if(isset($_POST['WebConfig']))
 		{
 			$model->attributes=$_POST['WebConfig'];
-         //CVarDumper::dump($model->attributes,10,true);die();
-         Yii::app()->cache->delete('web_config');
+            $check = getimagesize($_FILES["logo"]["tmp_name"]);
+            if($check !== false) {
+                $target_file = Yii::getPathOfAlias('webroot').'\images\logo.png';
+                move_uploaded_file($_FILES["logo"]["tmp_name"], $target_file);
+            }
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('update'));
 		}
 
 		$this->render('update',array(
@@ -86,45 +56,7 @@ class WebconfigController extends Controller
 		));
 	}
 
-	/**
-	 * Deletes a particular model.
-	 * If deletion is successful, the browser will be redirected to the 'admin' page.
-	 * @param integer $id the ID of the model to be deleted
-	 */
-	public function actionDelete($id)
-	{
-		$this->loadModel($id)->delete();
-
-		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
-	}
-
-	/**
-	 * Lists all models.
-	 */
-	public function actionIndex()
-	{
-		$dataProvider=new CActiveDataProvider('WebConfig');
-		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
-		));
-	}
-
-	/**
-	 * Manages all models.
-	 */
-	public function actionAdmin()
-	{
-		$model=new WebConfig('search');
-		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['WebConfig']))
-			$model->attributes=$_GET['WebConfig'];
-
-		$this->render('admin',array(
-			'model'=>$model,
-		));
-	}
+	
 
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.

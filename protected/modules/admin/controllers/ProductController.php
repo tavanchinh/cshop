@@ -99,7 +99,9 @@ class ProductController extends Controller
 			$model->attributes=$_POST['Product'];
             $model->modify_date = date('Y-m-d H:i:s');
             $model->modify_by = Yii::app()->session['admin_id'];
-            
+            if(isset($_POST['Product']['options'])){
+                $model->custom_field = Product::model()->encodeOptions($_POST['Product']['options']);
+            }
 			if($model->save()){
                 if(isset($_POST['categories']) && count($_POST['categories']) > 0){
                     ProductCategory::model()->QuickAdd($model->id,$_POST['categories'],true);
