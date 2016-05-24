@@ -133,7 +133,6 @@
         <?php }
         ?>
     </div>
->>>>>>> d6cc804a7f6d979e0e4f3b19953764fe0b56a31b
     
 	<div class="row buttons uk-margin-top uk-text-right">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save',array('class' => 'md-btn md-btn-primary')); ?>
