@@ -33,11 +33,17 @@
         	</div>
             
             <div class="row">
+<<<<<<< HEAD
                 <?php $list_parent = Functional::model()->getListParent();
                 $list_parent[0] = '-- Không chọn --';
                 ?>
                 <?php echo $form->labelEx($model,'parent_id'); ?>
         		<?php echo $form->dropDownList($model,'parent_id',$list_parent); ?>
+=======
+                <?php $list_parent = Functional::model()->getListParent();?>
+                <?php echo $form->labelEx($model,'parent_id'); ?>
+        		<?php echo $form->dropDownList($model,'parent_id',$list_parent,array('empty' => '-- Không chọn --')); ?>
+>>>>>>> d6cc804a7f6d979e0e4f3b19953764fe0b56a31b
             </div>
         </div>
     </div>
