@@ -143,7 +143,6 @@
 
 </div><!-- form -->
 <script>
-<<<<<<< HEAD
     $(document).ready(function(){
         $(".checklist input").click(function(){
             $this = $(this);
@@ -156,9 +155,4 @@
             
         });
     });
-=======
-   $(document).ready(function(){
-      
-   });
->>>>>>> d6cc804a7f6d979e0e4f3b19953764fe0b56a31b
 </script>
