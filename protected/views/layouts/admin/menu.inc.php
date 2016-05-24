@@ -75,40 +75,21 @@
                 'category_admin',
                 'category_create',
                 'category_update'
+            ),
+            'sub' => array(
+                array('link' => '/'.$module.'/category/admin?view=all','text' => 'Tất cả sản phẩm','controller_action' => 'category_admin'),
+                array('link' => '/'.$module.'/category/create','text' => 'Thêm mới','controller_action' => 'category_create'),
             )
         ),
         array(
-            'text' => 'Quản lý bài viết',
-            'icon' => '<i class="material-icons">create</i>',
-            'link' => '/'.$module.'/news/admin',
-            'list_controller_actions' => array(
-                'news_admin',
-                'news_create',
-                'news_update'
-            )
-        ),
-        
-        array(
-            'text' => 'Quản lý tags',
-            'icon' => '<i class="material-icons">&#xE54E;</i>',
-            'link' => '/'.$module.'/tag/admin',
-            'list_controller_actions' => array(
-                'tag_admin',
-                'tag_create',
-                'tag_update'
-            )
-        ),
-        array(
-            'text' => 'User',
-            'icon' => '<i class="material-icons">&#xE853;</i>',
+            'text' => 'Feedback',
+            'icon' => '<i class="material-icons">mode_comment</i>',
             'link' => '#',
             'list_controller_actions' => array(
-                'member_admin',
                 'feedback_admin',
             ),
             'sub' => array(
-                 array('link' => '/'.$module.'/member/admin','text' => 'Tất cả','controller_action' => 'member_admin'),
-                array('link' => '/'.$module.'/feedback/admin','text' => 'Ý kiến phản hồi','controller_action' => 'feedback_admin'),
+                array('link' => '/'.$module.'/feedback/admin','text' => 'Tất cả','controller_action' => 'feedback_admin'),
             )
         ),
         

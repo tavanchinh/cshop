@@ -93,4 +93,44 @@ class GroupFunctional extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+    
+    /**
+     * Add to table group_functional
+    */
+    public function QuickAdd($group_id,$list_cate,$unique = false){
+        $execute = false;
+        
+        if(count($list_cate) > 0){
+            // Kiểm tra trùng lặp
+            if($unique){
+                $delete_not_id = '-1';
+                $sql = "INSERT IGNORE INTO group_functional(group_id,functional_id) VALUES";
+                foreach($list_cate as $value){
+                    if($value > 0){
+                        $sql .= "($group_id,$value),";
+                        $execute = true;
+                        $delete_not_id .= ','.$value;
+                    }
+                }
+                if($execute){
+                    $sql = substr($sql,0,-1);
+                    Yii::app()->db->createCommand($sql)->execute();
+                    $sql_delete = "DELETE FROM group_functional WHERE group_id=$group_id AND functional_id NOT IN ($delete_not_id)";
+                    Yii::app()->db->createCommand($sql_delete)->execute();
+                }
+            }else{
+                $sql = "INSERT INTO group_functional(group_id,functional_id) VALUES";
+                foreach($list_cate as $value){
+                    if($value > 0){
+                        $sql .= "($group_id,$value),";
+                        $execute = true;
+                    }
+                }
+                if($execute){
+                    $sql = substr($sql,0,-1);
+                    Yii::app()->db->createCommand($sql)->execute();
+                }
+            }
+        }
+    }
 }

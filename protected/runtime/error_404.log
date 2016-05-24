@@ -1,0 +1,665 @@
+2016/05/19 21:33:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/default/login?rel=/admin
+---
+2016/05/19 21:33:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin
+---
+2016/05/19 21:33:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin
+---
+2016/05/19 21:33:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://localhost:2032/admin
+---
+2016/05/19 21:39:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin
+---
+2016/05/19 21:39:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin
+---
+2016/05/19 21:39:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin
+---
+2016/05/19 21:39:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin
+---
+2016/05/19 21:39:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/admin
+---
+2016/05/19 21:39:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/admin
+---
+2016/05/19 21:39:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 21:39:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 21:41:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 21:41:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 21:47:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 21:47:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 21:51:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 21:51:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 21:51:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 21:51:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 21:55:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 21:55:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 21:55:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 21:55:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 21:55:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 21:56:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 21:56:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 21:56:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 21:56:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 22:08:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 22:08:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 22:08:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 22:08:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 22:09:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 22:09:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 22:09:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 22:09:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 22:23:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 22:23:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 22:41:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 22:41:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 22:41:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 22:41:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 22:41:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 22:42:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 22:42:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 22:45:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 22:45:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 22:45:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 22:45:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 22:45:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 22:46:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 22:46:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 22:46:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 22:47:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 22:47:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 22:48:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 22:48:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 22:56:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 22:56:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 23:04:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "test.html".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('test.html')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/test.html
+---
+2016/05/19 23:17:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 23:17:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 23:17:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 23:19:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/19 23:26:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
+2016/05/22 19:01:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://localhost:2032/
+---
+2016/05/22 19:03:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon-breaking-right.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/icon-bre...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/icon-breaking-right.png
+HTTP_REFERER=http://localhost:2032/css/style.css?v=1.0
+---
+2016/05/22 19:03:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logo-2.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo-2.p...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/logo-2.png
+HTTP_REFERER=http://localhost:2032/admin/default/login?rel=/admin
+---
+2016/05/22 19:03:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon-breaking-right.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/icon-bre...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/icon-breaking-right.png
+HTTP_REFERER=http://localhost:2032/css/style.css?v=1.0
+---
+2016/05/22 19:07:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon-breaking-right.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/icon-bre...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/icon-breaking-right.png
+HTTP_REFERER=http://localhost:2032/css/style.css?v=1.0
+---
+2016/05/22 19:10:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon-breaking-right.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/icon-bre...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/icon-breaking-right.png
+HTTP_REFERER=http://localhost:2032/css/style.css?v=1.0
+---
+2016/05/22 19:11:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon-breaking-right.png".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('images/icon-bre...')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/icon-breaking-right.png
+HTTP_REFERER=http://localhost:2032/css/style.css?v=1.0
+---
+2016/05/22 21:23:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in D:\xampp\htdocs\cshop\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\cshop\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\xampp\htdocs\cshop\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\cshop\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://localhost:2032/admin/product/create
+---
