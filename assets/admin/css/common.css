@@ -338,10 +338,18 @@ ul.checklist li ul{
     list-style: none;
     float: left;
     width: 160px;
+    margin: 0 10px 0 0;
+    cursor: pointer;
 }
 .list-slide li .title{
     padding: 7px;
     background: #cccccc;
+}
+.list-slide li .image{
+    height: 100px;
+    background-color: #d7d7d7;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .list-slide li.add .image{
     border:1px dashed #737373;

@@ -28,11 +28,21 @@ class SlideController extends Controller
 	 * Displays a particular model.
 	 * @param integer $id the ID of the model to be displayed
 	 */
-	public function actionView($id)
+	public function actionView()
 	{
-		$this->render('view',array(
-			'model'=>$this->loadModel($id),
-		));
+		$id = Yii::app()->request->getParam('id');
+        $model = $this->loadModel($id);
+        
+        if($model != null){
+            $data['title'] = $model->title;
+            $data['link'] = $model->link;
+            $data['position'] = $model->position;
+            $data['checked'] = ($model->status == 1);
+            $data['image'] = $model->image;
+            $data['image_src'] = SimpleImage::model()->getThumbnail($model->image,150);
+            
+            echo json_encode($data);
+        }
 	}
 
 	/**
@@ -41,7 +51,14 @@ class SlideController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Slide;
+		$action = Yii::app()->request->getParam('action');
+        $id = Yii::app()->request->getParam('id');
+        if($action == 'update'){
+            $model = $this->loadModel($id);
+        }else{
+            $model=new Slide;
+        }
+        
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -49,23 +66,32 @@ class SlideController extends Controller
 		if(isset($_POST['Slide']))
 		{
 			$model->attributes=$_POST['Slide'];
+            if($action == 'add'){
+                $exists = Slide::model()->findByAttributes(array(
+                    'position' => $model->position,
+                    'image' => $model->image,
+                ));
+                if(!$exists) $model->save();
+            }else{
+                $model->save();
+            }
             
-            if($model->save()){
-                
-                if(count($list) > 0){
-                    foreach($list as $value){
-                        $html = '<li>
-                                    <div></div
-                                 </li>';
-                    }
+            $list = Slide::model()->findAll(array(
+                'order' => 'position ASC',
+            ));
+            if(count($list) > 0){
+                $html = '';
+                foreach($list as $value){
+                    $image = SimpleImage::model()->getThumbnail($value['image'],150);
+                    $html .= '<li class="slide-item" data-id="'.$value['id'].'">
+                                <div class="image" style="background:#d7d7d7 url(\''.$image.'\') no-repeat center;background-size:100%"></div>
+                                <p class="title">'.$value['title'].'</p>
+                             </li>';
                 }
+                echo $html;
             }
 				
 		}
-
-		$this->render('create',array(
-			'model'=>$model,
-		));
 	}
 
 	/**
