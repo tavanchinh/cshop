@@ -43,6 +43,37 @@
                 array('link' => '/'.$module.'/product/create','text' => 'Thêm mới','controller_action' => 'product_create'),
             )
         ),
+        
+        array(
+            'text' => 'Đơn hàng',
+            'icon' => '<i class="material-icons">shopping_cart</i>',
+            'link' => '#',
+            'list_controller_actions' => array(
+                'orders_admin',
+                'orders_create',
+                'orders_update',
+                
+            ),
+            'sub' => array(
+                array('link' => '/'.$module.'/orders/admin?view=all','text' => 'Tất cả','controller_action' => 'orders_admin'),
+                array('link' => '/'.$module.'/orders/create','text' => 'Thêm mới','controller_action' => 'product_create'),
+            )
+        ),
+        
+        array(
+            'text' => 'Slider',
+            'icon' => '<i class="material-icons">view_carousel</i>',
+            'link' => '#',
+            'list_controller_actions' => array(
+                'slide_admin',
+                'slide_create',
+                'slide_update',
+                
+            ),
+            'sub' => array(
+                array('link' => '/'.$module.'/slide/admin','text' => 'Tất cả','controller_action' => 'slide_admin'),                
+            )
+        ),
         /*
         array(
             'text' => 'Ban quản trị',
@@ -109,7 +140,6 @@
             ),
             'sub' => array(
                  array('link' => '/'.$module.'/webconfig/update/','text' => 'Web config','controller_action' => 'webconfig_update'),
-                 array('link' => '/'.$module.'/slide/admin','text' => 'Quản lý slide','controller_action' => 'slide_admin'),
                  array('link' => '/'.$module.'/ads/admin','text' => 'Quản lý quảng cáo','controller_action' => 'ads_admin'),
             )
         ),

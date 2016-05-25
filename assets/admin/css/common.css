@@ -231,6 +231,7 @@ textarea.md-input{
 .md-card-content .row input{
     width: auto;
 }
+ul.list-slide,
 ul.image-upload-gallery,
 ul.image-upload,
 ul.checklist{
@@ -329,4 +330,28 @@ ul.checklist li ul{
 }
 .subsubsub li a.active{
     font-weight: bold;
+}
+.list-slide{
+    overflow: hidden;
+}
+.list-slide li{
+    list-style: none;
+    float: left;
+    width: 160px;
+}
+.list-slide li .title{
+    padding: 7px;
+    background: #cccccc;
+}
+.list-slide li.add .image{
+    border:1px dashed #737373;
+    border-bottom:none;
+    text-align: center;
+    height: 100px;
+    cursor: pointer;
+}
+.list-slide li.add .image .material-icons{
+    font-size: 35px;
+    font-weight: bold;
+    line-height: 100px;
 }

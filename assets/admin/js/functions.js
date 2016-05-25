@@ -189,11 +189,14 @@ function delete_row(obj,url,id){
     }   
 }
 
-function toggle_feature(obj,url,id,feature){
-    if(feature){
-        $(obj).attr('class','material-icons').text('star_border');
-    }else{
+function toggle_feature(obj,url,id){
+    var feature = $(obj).attr('data-feature');
+    if(feature == 0){
+        $(obj).attr('data-feature',1);
         $(obj).attr('class','material-icons active').text('star');
+    }else{
+        $(obj).attr('data-feature',0);
+        $(obj).attr('class','material-icons').text('star_border');
     }
     var succ = function(data){
         

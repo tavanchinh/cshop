@@ -291,12 +291,11 @@ class ProductController extends Controller
         if($data->feature){
             $star = 'star';
             $class = 'material-icons active';
-            
         }else{
             $star = 'star_border';
             $class = 'material-icons';
         }
-        $funtion = "toggle_feature(this,'/admin/product/togglefeature',".$data->id.",".$data->feature.")";
-        return '<i onclick="'.$funtion.'" class="'.$class.'">'.$star.'</i>';
+        $funtion = "toggle_feature(this,'/admin/product/togglefeature',".$data->id.")";
+        return '<i data-feature="'.$data->feature.'" onclick="'.$funtion.'" class="'.$class.'">'.$star.'</i>';
     }
 }
