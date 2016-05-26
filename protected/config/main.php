@@ -195,5 +195,5 @@ return array(
         ),
         'app_id' => '1610462675881931',
         'app_secret' => 'f2e911dce6d2751597d0e063d0287721',
-        'cron_key' => 'pfutccy06qh0e5yhopbm3agd6cvxfuw'
+        'cache_time' => 3600,
     ));

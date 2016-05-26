@@ -68,7 +68,6 @@ class SlideController extends Controller
 			$model->attributes=$_POST['Slide'];
             if($action == 'add'){
                 $exists = Slide::model()->findByAttributes(array(
-                    'position' => $model->position,
                     'image' => $model->image,
                 ));
                 if(!$exists) $model->save();
@@ -82,8 +81,11 @@ class SlideController extends Controller
             if(count($list) > 0){
                 $html = '';
                 foreach($list as $value){
+                    $class = ($value['status'] == 0) ? ' disable' : '';
                     $image = SimpleImage::model()->getThumbnail($value['image'],150);
-                    $html .= '<li class="slide-item" data-id="'.$value['id'].'">
+                    $html .= '<li id="order-'.$value['id'].'"class="slide-item '.$class.'" data-id="'.$value['id'].'">
+                                <i class="material-icons edit" title="Sửa">create</i>
+                                <i class="material-icons delete  uk-text-danger" title="Xóa">clear</i>
                                 <div class="image" style="background:#d7d7d7 url(\''.$image.'\') no-repeat center;background-size:100%"></div>
                                 <p class="title">'.$value['title'].'</p>
                              </li>';
@@ -142,6 +144,18 @@ class SlideController extends Controller
 			'dataProvider'=>$dataProvider,
 		));
 	}
+    
+    public function actionSort(){
+        $order = Yii::app()->request->getPost('order');
+        if(count($order) > 0){
+            $i=0;
+            foreach($order as $value){
+                $i++;
+                $sql = "UPDATE slide SET position = $i WHERE id = $value";
+                Yii::app()->db->createCommand($sql)->execute();
+            }
+        }
+    } 
 
 	/**
 	 * Manages all models.

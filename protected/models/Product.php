@@ -246,4 +246,10 @@ class Product extends CActiveRecord
         return json_decode($options,true);
     }
     
+    public function getListFeature($limit){
+        $sql = "SELECT * FROM product WHERE feature = 1 LIMIT ORDER BY modify_date DESC, id DESC $limit";
+        $list = Yii::app()->db->createCommand($sql)->queryAll();
+        return $list;
+    }
+    
 }

@@ -33,7 +33,7 @@ $('.search-form form').submit(function(){
 <div class="md-card">
     <div class="md-card-content">
         <ul class="list-slide">
-            <div class="list">
+            <div class="list" id="sortable">
                 <?php $list = Slide::model()->findAll(array(
                             'order' => 'position ASC',
                         ));
@@ -44,7 +44,9 @@ $('.search-form form').submit(function(){
                             $i++;
                             $image = SimpleImage::model()->getThumbnail($value['image'],150);
                             ?>
-                            <li class="slide-item" data-id="<?php echo $value['id']?>">
+                            <li id="order-<?php echo $value['id']?>" class="slide-item <?php echo ($value['status'] == 0) ? 'disable' : ''?>" data-id="<?php echo $value['id']?>">
+                                <i class="material-icons edit" title="Sửa">create</i>
+                                <i class="material-icons delete  uk-text-danger" title="Xóa">clear</i>
                                 <div class="image" style="background-image:url('<?php echo $image?>') ;"></div>
                                 <p class="title"><?php echo $value['title']?></p>
                             </li>
@@ -54,7 +56,7 @@ $('.search-form form').submit(function(){
             </div>
             <li class="add">
                 <div class="image">
-                    <i class="material-icons">add</i>
+                    <i class="material-icons add">add</i>
                 </div>
                 <p class="title">Add slide</p>
             </li>
@@ -70,6 +72,9 @@ $('.search-form form').submit(function(){
 		<h3 class="md-card-toolbar-heading-text">Thuộc tính</h3>
     </div>
     <div class="md-card-content" id="attribute-slide">
+        <div class="loading hide">
+            <div class="md-preloader"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="48" width="48" viewBox="0 0 75 75"><circle cx="37.5" cy="37.5" r="33.5" stroke-width="4"></circle></svg></div>
+        </div>
         <?php $form=$this->beginWidget('CActiveForm', array(
         	'id'=>'slide-form',
         	// Please note: When you enable ajax validation, make sure the corresponding
@@ -125,8 +130,7 @@ $('.search-form form').submit(function(){
                     
                     <div class="row">
                         <?php $model->position = $i+1;?>
-                    	<?php echo $form->labelEx($model,'position'); ?>
-                    	<?php echo $form->numberField($model,'position'); ?>
+                    	<?php echo $form->hiddenField($model,'position'); ?>
                     	<?php echo $form->error($model,'position'); ?>
                     </div>
                     
@@ -150,12 +154,22 @@ $('.search-form form').submit(function(){
         <?php $this->endWidget(); ?>
     </div>
 </div>
-<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl?>/js/ajaxupload.js"></script>
+<script src="<?php echo Yii::app()->request->baseUrl?>/js/jquery-ui.js"></script>
+<script src="<?php echo Yii::app()->request->baseUrl?>/js/ajaxupload.js"></script>
 <script>
     $(function(){
         $(".general-input").ajaxupload({
             urlUpload:'/admin/default/uploadimage'
         });
+        
+        $( "#sortable" ).sortable({
+            axis: 'x',
+            update: function (event, ui) {
+                var data = $(this).sortable('serialize');
+                handleAjax('/admin/slide/sort','POST','',data);
+            }
+        });
+        $( "#sortable" ).disableSelection();
         $(document).on("click",".fa-times-circle", function(){
             $this = $(this);
             $this.parents(".item-upload").find("div.preview").css("background-image","none");
@@ -183,12 +197,15 @@ $('.search-form form').submit(function(){
         $(".add").click(function(){
             $("#slide-form").trigger("reset");
             $("#action").val('add');
+            $("#Slide_position").val(<?php echo $i+1?>);
+            $("#preview").css('background-image','none');
         });
-        $(document).on('click','.slide-item',function(e){
+        $(document).on('click','.slide-item .edit',function(e){
             e.preventDefault();
             var $this = $(this);
-            var id = $this.attr('data-id');
+            var id = $this.parent().attr('data-id');
             $("#id").val(id);
+            $("#attribute-slide .loading").removeClass('hide');
             var succ = function(data){
                 $("#Slide_title").val(data.title);
                 $("#Slide_link").val(data.link);
@@ -196,6 +213,7 @@ $('.search-form form').submit(function(){
                 $("#Slide_status").attr('checked',data.checked);
                 $("#Slide_image").val(data.image)
                 $("#preview").css("background-image","url("+data.image_src+")");
+                $(".loading").addClass('hide');
             }
             
             $("#action").val('update');
