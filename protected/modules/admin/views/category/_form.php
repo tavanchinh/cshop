@@ -35,6 +35,12 @@
         	<?php echo $form->error($model,'name'); ?>
         </div>
         
+        <div class="row uk-width-1-2">
+        	<?php echo $form->labelEx($model,'slug'); ?>
+        	<?php echo $form->textField($model,'slug',array('size'=>60,'maxlength'=>255)); ?>
+        	<?php echo $form->error($model,'slug'); ?>
+        </div>
+        
     </div>
     
 	<div class="row buttons">
@@ -44,3 +50,12 @@
 <?php $this->endWidget(); ?>
 
 </div><!-- form -->
+<script>
+    $(function(){
+        $("#Category_name").keyup(function(){
+            var str = $(this).val();
+            str = removeSign(str);
+            $("#Category_slug").val('/danh-muc-san-pham/'+str);
+        })
+    })
+</script>

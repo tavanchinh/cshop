@@ -1,28 +1,29 @@
 <?php
 
 /**
- * This is the model class for table "web_config".
+ * This is the model class for table "page".
  *
- * The followings are the available columns in table 'web_config':
+ * The followings are the available columns in table 'page':
  * @property integer $id
- * @property string $web_title
- * @property string $meta_description
- * @property string $meta_keyword
- * @property string $fanpage_url
- * @property string $secret_id
- * @property string $app_id
- * @property string $youtube_url
- * @property string $hotline
- * @property string $email
+ * @property string $name
+ * @property string $slug
+ * @property string $content
+ * @property string $layout
+ * @property integer $status
+ * @property string $create_date
+ * @property string $modify_date
  */
-class WebConfig extends CActiveRecord
+class Page extends CActiveRecord
 {
-	/**
+	public $list_layout = array('main');
+    public $list_status = array('Ẩn','Hiển thị');
+    
+    /**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'web_config';
+		return 'page';
 	}
 
 	/**
@@ -33,11 +34,12 @@ class WebConfig extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('web_title, fanpage_url, secret_id, app_id, youtube_url, hotline, email', 'length', 'max'=>255),
-			array('meta_description, meta_keyword', 'length', 'max'=>512),
+			array('status', 'numerical', 'integerOnly'=>true),
+			array('name, slug, layout', 'length', 'max'=>255),
+			array('content, create_date, modify_date', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, web_title, meta_description, meta_keyword, fanpage_url, secret_id, app_id, youtube_url, hotline, email', 'safe', 'on'=>'search'),
+			array('id, name, slug, content, layout, status, create_date, modify_date', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -59,15 +61,13 @@ class WebConfig extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'web_title' => 'Web title',
-			'meta_description' => 'Description',
-			'meta_keyword' => 'Keyword',
-			'fanpage_url' => 'Link fanpage',
-			'secret_id' => 'Secret id',
-			'app_id' => 'App id',
-			'youtube_url' => 'Link Youtube',
-            'hotline' => 'Hotline',
-            'email' => 'Email',
+			'name' => 'Name',
+			'slug' => 'Slug',
+			'content' => 'Content',
+			'layout' => 'Layout',
+			'status' => 'Status',
+			'create_date' => 'Create Date',
+			'modify_date' => 'Modify Date',
 		);
 	}
 
@@ -90,15 +90,13 @@ class WebConfig extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('web_title',$this->web_title,true);
-		$criteria->compare('meta_description',$this->meta_description,true);
-		$criteria->compare('meta_keyword',$this->meta_keyword,true);
-		$criteria->compare('fanpage_url',$this->fanpage_url,true);
-		$criteria->compare('secret_id',$this->secret_id,true);
-		$criteria->compare('app_id',$this->app_id,true);
-		$criteria->compare('youtube_url',$this->youtube_url,true);
-        $criteria->compare('hotline',$this->hotline,true);
-        $criteria->compare('email',$this->email,true);
+		$criteria->compare('name',$this->name,true);
+		$criteria->compare('slug',$this->slug,true);
+		$criteria->compare('content',$this->content,true);
+		$criteria->compare('layout',$this->layout,true);
+		$criteria->compare('status',$this->status);
+		$criteria->compare('create_date',$this->create_date,true);
+		$criteria->compare('modify_date',$this->modify_date,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -112,14 +110,26 @@ class WebConfig extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return WebConfig the static model class
+	 * @return Page the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
 	}
     
-    public function getInfo(){
-        return $this->model()->findByPk(1);
+    
+    /**
+     * Tra ve danh sach page bao gom id va title
+    */
+    public function getListSimple(){
+        $list = array();
+        $sql = "SELECT id, name FROM page ORDER BY id DESC";
+        $response = Yii::app()->db->createCommand($sql)->queryAll();
+        if(count($response) > 0){
+            foreach($response as $value){
+                $list[$value['id']] = $value['name'];
+            }
+        }
+        return $list;
     }
 }

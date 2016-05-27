@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50527
 File Encoding         : 65001
 
-Date: 2016-05-25 17:41:36
+Date: 2016-05-27 17:59:39
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -22,6 +22,7 @@ DROP TABLE IF EXISTS `category`;
 CREATE TABLE `category` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
+  `slug` varchar(255) DEFAULT NULL,
   `parent_id` int(11) DEFAULT NULL,
   `position` int(255) DEFAULT '888',
   `active` tinyint(4) DEFAULT '1',
@@ -31,17 +32,17 @@ CREATE TABLE `category` (
 -- ----------------------------
 -- Records of category
 -- ----------------------------
-INSERT INTO `category` VALUES ('61', 'Quần', '0', '888', '1');
-INSERT INTO `category` VALUES ('62', 'Áo', '0', '888', '1');
-INSERT INTO `category` VALUES ('63', 'Quần jean', '61', '888', '1');
-INSERT INTO `category` VALUES ('64', 'Quân kaki', '61', '888', '1');
-INSERT INTO `category` VALUES ('65', 'Quần sooc', '61', '888', '1');
-INSERT INTO `category` VALUES ('66', 'Áo phông', '62', '888', '1');
-INSERT INTO `category` VALUES ('67', 'Áo sơ mi', '62', '888', '1');
-INSERT INTO `category` VALUES ('68', 'Váy', '0', '888', '1');
-INSERT INTO `category` VALUES ('69', 'Phụ kiện', '0', '888', '1');
-INSERT INTO `category` VALUES ('70', 'Đồng hồ', '69', '888', '1');
-INSERT INTO `category` VALUES ('71', 'Mũ', '69', '888', '1');
+INSERT INTO `category` VALUES ('61', 'Quần', '/danh-muc-san-pham/quan', '0', '888', '1');
+INSERT INTO `category` VALUES ('62', 'Áo', '/danh-muc-san-pham/ao', '0', '888', '1');
+INSERT INTO `category` VALUES ('63', 'Quần jean', '/danh-muc-san-pham/quan-jean', '61', '888', '1');
+INSERT INTO `category` VALUES ('64', 'Quân kaki', '/danh-muc-san-pham/quan-kaki', '61', '888', '1');
+INSERT INTO `category` VALUES ('65', 'Quần sooc', '/danh-muc-san-pham/quan-sooc', '61', '888', '1');
+INSERT INTO `category` VALUES ('66', 'Áo phông', '/danh-muc-san-pham/ao', '62', '888', '1');
+INSERT INTO `category` VALUES ('67', 'Áo sơ mi', '/danh-muc-san-pham/ao-so-mi', '62', '888', '1');
+INSERT INTO `category` VALUES ('68', 'Váy', '/danh-muc-san-pham/vay', '0', '888', '1');
+INSERT INTO `category` VALUES ('69', 'Phụ kiện', '/danh-muc-san-pham/phu-kien', '0', '888', '1');
+INSERT INTO `category` VALUES ('70', 'Đồng hồ', '/danh-muc-san-pham/dong-ho', '69', '888', '1');
+INSERT INTO `category` VALUES ('71', 'Mũ', '/danh-muc-san-pham/mu', '69', '888', '1');
 
 -- ----------------------------
 -- Table structure for functional
@@ -55,7 +56,7 @@ CREATE TABLE `functional` (
   `action_id` varchar(50) DEFAULT NULL,
   `parent_id` int(11) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=84 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=85 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of functional
@@ -67,6 +68,7 @@ INSERT INTO `functional` VALUES ('80', 'Sản phẩm', '', null, '', '0');
 INSERT INTO `functional` VALUES ('81', 'Tất cả', '/admin/product/admin', 'product', 'admin', '80');
 INSERT INTO `functional` VALUES ('82', 'Thêm mới', '/admin/product/create', 'product', 'create', '80');
 INSERT INTO `functional` VALUES ('83', 'Cập nhật', '/admin/product/update', 'product', 'update', '80');
+INSERT INTO `functional` VALUES ('84', 'Active', '/admin/product/active', 'product', 'active', '80');
 
 -- ----------------------------
 -- Table structure for groups
@@ -219,6 +221,28 @@ INSERT INTO `member_group` VALUES ('31', '5');
 INSERT INTO `member_group` VALUES ('32', '6');
 
 -- ----------------------------
+-- Table structure for menu
+-- ----------------------------
+DROP TABLE IF EXISTS `menu`;
+CREATE TABLE `menu` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `parent_id` int(11) DEFAULT '0',
+  `title` varchar(255) DEFAULT NULL,
+  `slug` varchar(255) DEFAULT NULL,
+  `type` tinyint(255) DEFAULT '1' COMMENT '0 - Trang chủ |  1 Page | 2 - Cate',
+  `position` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of menu
+-- ----------------------------
+INSERT INTO `menu` VALUES ('1', '0', 'Trang chủ', '/', '1', '1');
+INSERT INTO `menu` VALUES ('2', '0', 'Giới thiệu', '/gioi-thieu', '2', '2');
+INSERT INTO `menu` VALUES ('3', '1', 'Sản phẩm', '/danh-muc-san-pham', '1', '2');
+INSERT INTO `menu` VALUES ('4', '2', 'Quần', '/danh-muc-san-pham/quan', '1', '3');
+
+-- ----------------------------
 -- Table structure for menu_admin
 -- ----------------------------
 DROP TABLE IF EXISTS `menu_admin`;
@@ -285,12 +309,16 @@ CREATE TABLE `page` (
   `slug` varchar(255) DEFAULT NULL,
   `content` text,
   `layout` varchar(255) DEFAULT NULL,
+  `status` tinyint(4) DEFAULT '1',
+  `create_date` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `modify_date` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of page
 -- ----------------------------
+INSERT INTO `page` VALUES ('1', 'Liên hệ', '/lien-he', '<p>Nội dung trang li&ecirc;n hệ</p>\r\n', '0', '1', '2016-05-27 10:33:13', null);
 
 -- ----------------------------
 -- Table structure for post
@@ -427,11 +455,14 @@ CREATE TABLE `slide` (
   `status` tinyint(4) DEFAULT '1',
   `position` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of slide
 -- ----------------------------
+INSERT INTO `slide` VALUES ('1', 'Slide 1', '#', '12212110143239789400726644049947-201605962.jpg', '0', '1');
+INSERT INTO `slide` VALUES ('2', 'Slide 2', '#', 'c3602016-05-06-06-09-23-432-201605699-201605375.jpg', '1', '3');
+INSERT INTO `slide` VALUES ('3', 'Slide 3', '#', '20160506061755-201605597-201605631.jpg', '1', '2');
 
 -- ----------------------------
 -- Table structure for tag
@@ -466,10 +497,12 @@ CREATE TABLE `web_config` (
   `secret_id` varchar(255) DEFAULT NULL,
   `app_id` varchar(255) DEFAULT NULL,
   `youtube_url` varchar(255) DEFAULT NULL COMMENT 'Link Youtube',
+  `hotline` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of web_config
 -- ----------------------------
-INSERT INTO `web_config` VALUES ('1', 'Thời trang Việt Nam', '', '', '', '', '', '');
+INSERT INTO `web_config` VALUES ('1', 'Thời trang Việt Nam', '', '', '', '', '', '', '0974 12 55 16', 'chinh.tv91@gmail.com');

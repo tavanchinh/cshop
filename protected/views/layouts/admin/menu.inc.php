@@ -11,6 +11,18 @@
         ),
         
         array(
+            'text' => 'Menu',
+            'icon' => '<i class="material-icons">menu</i>',
+            'link' => '/'.$module.'/menu/admin',
+            'list_controller_actions' => array(
+                'menu_admin',
+            ),
+            'sub' => array(
+                array('link' => '/'.$module.'/category/admin?view=all','text' => 'Quản lý menu','controller_action' => 'menu_admin'),
+            )
+        ),
+        
+        array(
             'text' => 'User',
             'icon' => '<i class="material-icons">perm_identity</i>',
             'link' => '#',
@@ -74,6 +86,21 @@
                 array('link' => '/'.$module.'/slide/admin','text' => 'Tất cả','controller_action' => 'slide_admin'),                
             )
         ),
+        
+        array(
+            'text' => 'Trang',
+            'icon' => '<i class="material-icons">library_books</i>',
+            'link' => '#',
+            'list_controller_actions' => array(
+                'page_admin',
+                'page_create',
+                'page_update',
+                
+            ),
+            'sub' => array(
+                array('link' => '/'.$module.'/page/admin','text' => 'Tất cả','controller_action' => 'page_admin'),                
+            )
+        ),
         /*
         array(
             'text' => 'Ban quản trị',
@@ -100,7 +127,7 @@
         */
         array(
             'text' => 'Thể loại',
-            'icon' => '<i class="material-icons">&#xE02F;</i>',
+            'icon' => '<i class="material-icons">subject</i>',
             'link' => '/'.$module.'/category/admin',
             'list_controller_actions' => array(
                 'category_admin',

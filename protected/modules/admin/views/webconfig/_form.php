@@ -104,6 +104,30 @@
         </div>
     </div>
     
+    <div class="md-card">
+        <div class="md-card-toolbar">
+            <div class="md-card-toolbar-actions">
+                <i class="md-icon material-icons md-card-toggle"></i>
+            </div>
+            <h3 class="md-card-toolbar-heading-text">Support</h3>
+        </div>
+        <div class="md-card-content">
+            <div class="row">
+            	<?php echo $form->labelEx($model,'email'); ?>
+            	<?php echo $form->textField($model,'email',array('size'=>60,'maxlength'=>255)); ?>
+            	<?php echo $form->error($model,'email'); ?>
+            </div>
+                
+        
+            <div class="row">
+            	<?php echo $form->labelEx($model,'hotline'); ?>
+            	<?php echo $form->textField($model,'hotline',array('size'=>60,'maxlength'=>255)); ?>
+            	<?php echo $form->error($model,'hotline'); ?>
+            </div>
+           
+        </div>
+    </div>
+    
     
 	<div class="row buttons uk-text-right uk-margin-top">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save',array('class' => 'md-btn md-btn-primary')); ?>

@@ -64,28 +64,17 @@ a,a:focus,a:hover {
 .container {
     padding: 0;
     margin: 0 auto;
-    width: 1000px;
-}
-.page-shadow{
-    box-shadow: 0 0 20px rgba(0,0,0,0.2);
-    -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.2);
-    -moz-box-shadow: 0 0 20px rgba(0,0,0,0.2);
-    width: 1000px;
-    padding:10px;
-    background: #FFFFFF;
+    width: 1170px;
 }
 #header{
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     background: #fff;
     margin: 0 0 10px 0;
-    padding: 0 0 10px 0;
 }
 #header .top-menu{
-    background-color: #fc7100;
-    color: #fff;
-    padding: 3px;
-    font-size: 12px;
-    font-family: 'Open Sans';
+    background-color: #f6f6f6;
+    color: #666;
+    padding: 8px 0;
 }
 #header .top-menu span.date{
     float: left;
@@ -93,26 +82,29 @@ a,a:focus,a:hover {
 }
 #header .top-menu ul li{
     display: inline-block;
-    margin: 0 10px;
 }
-#header .top-menu ul li a{
-    color:#ffffff;
+#header .top-menu ul li span{
+    line-height: 13px;
+}
+#header .top-menu ul.support li:first-child{
     
+}
+#header .top-menu ul.support li:first-child span{
+    border-right:1px solid #cccccc;
+    padding-right: 10px;
+    margin-right: 10px;
 }
 #header .top-menu ul li a:hover{
     color: #4db2ec;
 }
 #header .middle{
-    margin: 10px 0 0 0;
+    padding:15px 0
 }
 #header .middle .logo{
     float: left;
 }
 #header .middle .logo img{
-    width: 200px;
-}
-#header .middle .ads{
-    float: right;
+    width: 250px;
 }
 .nav{
     background: #2e2e2e;

@@ -42,10 +42,13 @@ class WebconfigController extends Controller
 		if(isset($_POST['WebConfig']))
 		{
 			$model->attributes=$_POST['WebConfig'];
-            $check = getimagesize($_FILES["logo"]["tmp_name"]);
-            if($check !== false) {
-                $target_file = Yii::getPathOfAlias('webroot').'\images\logo.png';
-                move_uploaded_file($_FILES["logo"]["tmp_name"], $target_file);
+            if($_FILES["logo"]["tmp_name"] != ''){
+                //var_dump($_FILES["logo"]["tmp_name"]);die;
+                $check = getimagesize($_FILES["logo"]["tmp_name"]);
+                if($check !== false) {
+                    $target_file = Yii::getPathOfAlias('webroot').'\images\logo.png';
+                    move_uploaded_file($_FILES["logo"]["tmp_name"], $target_file);
+                }
             }
 			if($model->save())
 				$this->redirect(array('update'));

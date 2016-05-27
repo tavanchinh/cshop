@@ -28,13 +28,5 @@
                 <?php }?>
             </li>
         <?php }?>
-        <li class="menu-search">
-            <form class="form-search" id="form-search" action="" method="GET">
-                <div class="input-container">
-                    <input name="p" placeholder="Tìm kiếm" />
-                    <i class="fa fa-search" onclick="$('#form-search').submit();"></i>
-                </div>
-            </form>
-        </li>
     </ul>
 </div>

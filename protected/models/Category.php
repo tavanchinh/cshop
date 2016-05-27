@@ -6,6 +6,7 @@
  * The followings are the available columns in table 'category':
  * @property integer $id
  * @property string $name
+ * @property string $slug
  * @property integer $parent_id
  * @property string $position
  * @property integer $active
@@ -36,13 +37,13 @@ class Category extends CActiveRecord
                 'numerical',
                 'integerOnly' => true),
             array(
-                'name, position',
+                'name,slug, position',
                 'length',
                 'max' => 255),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
             array(
-                'id, name, parent_id, position, active',
+                'id, name, slug, parent_id, position, active',
                 'safe',
                 'on' => 'search'),
             );
@@ -69,6 +70,7 @@ class Category extends CActiveRecord
             'parent_id' => 'Danh mục cha',
             'position' => 'Vị trí',
             'active' => 'Hiển thị',
+            'slug' => 'Slug',
             );
     }
 
@@ -92,6 +94,7 @@ class Category extends CActiveRecord
 
         $criteria->compare('id', $this->id);
         $criteria->compare('name', $this->name, true);
+        $criteria->compare('slug', $this->slug, true);
         $criteria->compare('parent_id', $this->parent_id);
         $criteria->compare('position', $this->position, true);
         $criteria->compare('active', $this->active);
@@ -168,7 +171,7 @@ class Category extends CActiveRecord
     public function buidPageTitle($name, $type = 1, $year = null)
     {
         $name = trim($name);
-        $title = 'Phimbathu.com';
+        $title = 'example.com';
         if ($year == null) {
             $year = date('Y');
         }

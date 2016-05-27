@@ -1,19 +1,18 @@
 <?php 
-$days = ['Thứ hai','Thứ ba','Thứ tư','Thứ năm','Thứ sáu','Thứ bảy','Chủ nhât'];
+    $webconfig = WebConfig::model()->getInfo();
 ?>
 <header id="header">
     
     <div class="top-menu">
         <div class="container">
-            <span class="date"><?php echo $days[date('N')-1];?>, <?php echo date('d'). ' tháng ' . date('m') . ' năm ' . date('Y')?></span>
-            <ul>
+            <ul class="support">
                 <li>
-                    <a href="#">Đăng nhập</a>
-                    <span>/</span>
-                    <a href="#">Đăng ký</a>
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    <span><?php echo $webconfig->hotline;?></span>
                 </li>
                 <li>
-                    <a href="http://phimbathu.com" target="_blank">Xem phim</a>
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <span><?php echo $webconfig->email;?></span>
                 </li>
             </ul>
         </div>
@@ -21,11 +20,15 @@ $days = ['Thứ hai','Thứ ba','Thứ tư','Thứ năm','Thứ sáu','Thứ b�
     <div class="middle">
         <div class="container">
             <a class="logo" title="Trang chủ" href="/">
-                <img id="logo" alt="hautruong.net" src="http://demo.tagdiv.com/newspaper/wp-content/uploads/2015/06/logo-header.png" />
+                <img id="logo" alt="" src="/images/logo.png" />
             </a>
-            <div class="ads">
-                <img src="http://demo.tagdiv.com/newspaper/wp-content/uploads/2015/04/rec728.jpg" />
-            </div>
+            
+            <form class="form-search" id="form-search" action="" method="GET">
+                <div class="input-container">
+                    <input name="p" placeholder="Tìm kiếm" />
+                    <i class="fa fa-search" onclick="$('#form-search').submit();"></i>
+                </div>
+            </form>
         </div>
     </div>
     
