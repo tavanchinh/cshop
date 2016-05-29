@@ -41,22 +41,40 @@ class MenuController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Menu;
-
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
-		if(isset($_POST['Menu']))
-		{
-			$model->attributes=$_POST['Menu'];
-			if($model->save())
-				$this->redirect(array('admin'));
-		}
-
-		$this->render('create',array(
-			'model'=>$model,
-		));
+		$data = Yii::app()->request->getPost('data');
+        $html = '';
+        if($data != null && count($data) > 0){
+            foreach($data as $value){
+                if($value['type'] == 1){
+                    $sql = "INSERT INTO menu(parent_id,title,slug,type,position) SELECT 0,name,slug,1,0 FROM page WHERE id =".$value['id'];
+                    
+                }elseif($value['type'] == 2){
+                    $sql = "INSERT INTO menu(parent_id,title,slug,type,position) SELECT 0,name,slug,2,0 FROM category WHERE id =".$value['id'];
+                }
+                
+                Yii::app()->db->createCommand($sql)->execute();
+            }
+            $html = Menu::model()->buidMenuTreeBackend();
+            echo $html;
+        }
 	}
+    
+    public function actionCreateCustomLink(){
+        $title = Yii::app()->request->getParam('title');
+        $slug = Yii::app()->request->getParam('slug');
+        if($title != ''){
+            $menu = new Menu;
+            $menu->title = $title;
+            $menu->slug = $slug;
+            $menu->position = 0;
+            $menu->type = 3;
+            $menu->save();
+            
+            
+            $html = Menu::model()->buidMenuTreeBackend();
+            echo $html;
+        }
+    }
 
 	/**
 	 * Updates a particular model.
@@ -77,7 +95,7 @@ class MenuController extends Controller
                     if(isset($value['children'])){
                         $children = $value['children'];
                         if(count($children) > 0){
-                            $j = $i;
+                            $j = $i+1;
                             foreach($children as $chid){
                                 $j++;
                                 $sql = "UPDATE menu SET parent_id = ".$value['id'].", position =$j WHERE id =".$chid['id'];
@@ -98,7 +116,7 @@ class MenuController extends Controller
 	public function actionRemove()
 	{
 		$id = Yii::app()->request->getPost('id');
-        //$this->loadModel($id)->delete();
+        $this->loadModel($id)->delete();
 
 	}
 

@@ -172,4 +172,36 @@ class Menu extends CActiveRecord
         }
         return $data;
     }
+    
+    
+    public function buidMenuTreeBackend(){
+        $all = $this->getMultilevel();
+        $html = '';
+        if(count($all) > 0){
+            $html .= '<div class="dd"><ol class="dd-list">';
+            foreach($all as $value){
+                $html .= '<li class="dd-item" data-id="'.$value['id'].'">';
+                    $html .= '<span class="uk-float-right btn-delete-menu" title="Xóa" data-id="'.$value['id'].'"><i class="material-icons">delete</i></span>';
+                    $html .= '<div class="dd-handle">'.$value['title'].'</div>';
+                    if(isset($value['sub'])){
+                        $html .= '<ol class="dd-list">';
+                        $list_sub = $value['sub'];
+                        if(count($list_sub) >  0){
+                            foreach($list_sub as $sub){
+                                $html .= '<li class="dd-item" data-id="'.$sub['id'].'">';
+                                    $html .= '<span class="uk-float-right btn-delete-menu" title="Xóa" data-id="'.$sub['id'].'"><i class="material-icons">delete</i></span>';
+                                    $html .= '<div class="dd-handle">'.$sub['title'].'</div>';
+                                $html .= '</li>';
+                            }
+                        }
+                        $html .= '</ol>';
+                        
+                    }
+                $html .= '</li>';
+            }        
+                    
+            $html .= '</ol></div>';
+        }
+        return $html;
+    }
 }
