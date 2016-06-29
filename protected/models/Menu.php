@@ -123,7 +123,7 @@ class Menu extends CActiveRecord
     }
     
     /**
-     * Get all category
+     * Get all menu
      */
     public function getAll()
     {
@@ -139,6 +139,11 @@ class Menu extends CActiveRecord
         
         return $return;
     }
+    
+    
+    
+    
+    
     /**
      * Lay danh sach cat dang cay. Su dung de quy
      */
@@ -157,9 +162,12 @@ class Menu extends CActiveRecord
         return $trees;
     }
     
-    public function getMultilevel(){
+    public function getMultilevel($list = array()){
         $data = array();
-        $list = $this->getAll();
+        if(count($list) == 0){
+            $list = $this->getAll();
+        }
+        
         $tmp = array();
         foreach($list as $key=>$value){            
             if($value['parent_id'] == 0){

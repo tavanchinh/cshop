@@ -1,3 +1,7 @@
+<?php 
+$tree_menu = Menu::model()->getMultilevel();
+$path_info = Yii::app()->request->getPathInfo();
+?>
 <div class="container nav">
     <ul id="main-menu"> 
         <?php 
@@ -7,23 +11,18 @@
         ?>
         <?php 
         $i = 0;
-        foreach($menus as $value){
+        foreach($tree_menu as $value){
             $i++;
             ?>
-            <li <?php echo ($i == 1) ? 'class="active"' : ''?>>
-                <a href="#" title=""><?php echo $value?></a>
-                <?php if($i==3){?>
+            <li <?php echo ($value['slug'] == $path_info) ? 'class="active"' : ''?>>
+                <a href="<?php echo $value['slug']?>" title=""><?php echo $value['title']?></a>
+                <?php if(isset($value['sub'])){
+                    $list_sub = $value['sub'];
+                    ?>
                     <ul class="sub-menu">
-                        <li><a title="" href="#">Phim Châu Á</a></li>
-                        <li><a title="" href="#">Phim Châu Mĩ</a></li>
-                        <li><a title="" href="#">Phim rạp hot</a></li>
-                    </ul>
-                <?php }?>
-                <?php if($i==5){?>
-                    <ul class="sub-menu">
-                        <li><a title="" href="#">Chế</a></li>
-                        <li><a title="" href="#">Cảnh phim</a></li>
-                        <li><a title="" href="#">OST</a></li>
+                        <?php foreach($list_sub as $sub){?>
+                            <li><a title="<?php echo $sub['title']?>" href="<?php echo $sub['slug']?>"><?php echo $sub['title']?></a></li>
+                        <?php }?>
                     </ul>
                 <?php }?>
             </li>

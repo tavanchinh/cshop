@@ -102,9 +102,16 @@ a,a:focus,a:hover {
 }
 #header .middle .logo{
     float: left;
+    width: 20%;
+    margin-right: 5%;
 }
 #header .middle .logo img{
-    width: 250px;
+    max-width: 250px;
+}
+#header .middle .form-search{
+    width: 50%;
+    float: left;
+    margin-right: 5%;
 }
 .nav{
     background: #2e2e2e;

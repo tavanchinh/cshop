@@ -107,4 +107,10 @@ class Slide extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+    
+    public function getAllActive($limit){
+        $sql = "SELECT * FROM slide WHERE status = 1 ORDER BY position ASC";
+        $list = Yii::app()->db->createCommand($sql)->queryAll();
+        return $list;
+    }
 }

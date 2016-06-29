@@ -207,7 +207,7 @@ class Product extends CActiveRecord
             3 => array('text' => 'Ẩn','mode' => 'hide','count' => 0),
             
         );
-        $sql = "SELECT count(1) total, status FROM product GROUP BY status";
+        $sql = "SELECT count(1) total, status FROM ".$this->tableName()." GROUP BY status";
         $response = Yii::app()->db->createCommand($sql)->queryAll();
         $total = 0;
         if(count($response) > 0){

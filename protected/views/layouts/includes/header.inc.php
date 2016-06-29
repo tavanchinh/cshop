@@ -19,6 +19,7 @@
     </div>
     <div class="middle">
         <div class="container">
+            
             <a class="logo" title="Trang chủ" href="/">
                 <img id="logo" alt="" src="/images/logo.png" />
             </a>

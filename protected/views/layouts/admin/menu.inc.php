@@ -13,12 +13,28 @@
         array(
             'text' => 'Menu',
             'icon' => '<i class="material-icons">menu</i>',
-            'link' => '/'.$module.'/menu/admin',
+            'link' => '#',
             'list_controller_actions' => array(
                 'menu_admin',
             ),
             'sub' => array(
-                array('link' => '/'.$module.'/category/admin?view=all','text' => 'Quản lý menu','controller_action' => 'menu_admin'),
+                array('link' => '/'.$module.'/menu/admin?view=all','text' => 'Quản lý menu','controller_action' => 'menu_admin'),
+                
+            )
+        ),
+        
+        array(
+            'text' => 'Post',
+            'icon' => '<i class="material-icons">mode_edit</i>',
+            'link' => '#',
+            'list_controller_actions' => array(
+                'post_admin',
+                'post_create',
+                'post_update'
+            ),
+            'sub' => array(
+                array('link' => '/'.$module.'/post/admin?view=all','text' => 'Tất cả','controller_action' => 'post_admin'),
+                array('link' => '/'.$module.'/post/create','text' => 'Thêm mới','controller_action' => 'post_create'),
             )
         ),
         

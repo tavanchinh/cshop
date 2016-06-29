@@ -118,7 +118,7 @@ class ProductController extends Controller
                 if(!$_POST['continue']){
                     $this->redirect(array('admin'));
                 }else{
-                    $model->unsetAttributes();
+                    $this->redirect(array('create'));
                 }
 			}
 		}

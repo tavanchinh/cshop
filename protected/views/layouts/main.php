@@ -30,8 +30,8 @@ if($mobile_detect->isMobile()){
     <link rel="stylesheet" href="../css/owl.carousel.css" />
     <link rel="stylesheet" href="../css/style.css?v=1.0" />
     <?php if($mobile_detect->isMobile()){?>
-    <link rel="stylesheet" type="text/css" href="/css/responsive.css?v=1.0" />
     <?php }?>
+    <link rel="stylesheet" type="text/css" href="/css/responsive.css?v=1.0" />
 	<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="../js/owl.carousel.min.js"></script>
 </head>
